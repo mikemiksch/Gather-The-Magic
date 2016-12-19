@@ -17,6 +17,7 @@
         'types VARCHAR(50) NOT NULL, ' +
         'rarity VARCHAR(50) NOT NULL, ' +
         'text VARCHAR(500) NOT NULL, ' +
+        'imageUrl VARCHAR(500) NOT NULL, ' +
         'power VARCHAR, ' +
         'toughness VARCHAR);',
       callback
@@ -27,8 +28,8 @@
     webDB.execute(
       [{
         'sql': 'INSERT INTO searchResults ' +
-        '(name, cmc, colors, types, rarity, text, power, toughness) ' +
-        'VALUES (?, ?, ?, ?, ?, ?, ?, ?);',
+        '(name, cmc, colors, types, rarity, text, imageUrl, power, toughness) ' +
+        'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);',
         'data':
           [this.name,
           this.cmc,
@@ -36,6 +37,7 @@
           this.types,
           this.rarity,
           this.text,
+          this.imageUrl,
           this.power,
           this.toughness],
       }],
@@ -88,22 +90,17 @@
     });
   };
 
-  Card.clearPowerToughness = function() {
-    webDB.execute('UPDATE searchResults SET power = "" WHERE power = "undefined"', function() {
-      webDB.execute('UPDATE searchResults SET toughness = "" WHERE toughness = "undefined"');
-    });
-  };
-
   Card.loadTable = function(callback) {
     buildString();
     var JSONdata = [];
     console.log(queryString);
     webDB.execute(
-      'SELECT * FROM searchResults ORDER BY name DESC',
+      'SELECT * FROM searchResults ORDER BY name ASC',
         function(rows) {
           if(rows.length) {
             Card.loadResults(rows);
-            callback();
+            showCards.listAll();
+            // callback();
           } else {
             $.getJSON(queryString, function(data) {
               data.cards.forEach(function(item) {
@@ -111,17 +108,16 @@
                 card.generateRow();
               });
               webDB.execute(
-                'SELECT * FROM searchResults ORDER BY name DESC',
+                'SELECT * FROM searchResults ORDER BY name ASC',
                 function(rows) {
                   Card.loadResults(rows);
+                  showCards.listAll();
                   // callback();
                 });
             });
           }
         });
-    Card.clearPowerToughness();
   };
-
   module.Card = Card;
 })(window);
 

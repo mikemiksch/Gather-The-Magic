@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gather The Magic</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
     <script id="card-data-template" type="text/x-handlebars-template">
       <section class="card-data">
         <img src="{{imageUrl}}">
@@ -20,6 +20,8 @@
     </script>
   </head>
   <body>
+    <section id="cards">
+    </section>
     <!--Vendor scripts-->
     <script src="vendor/scripts/handlebars.js"></script>
     <script src="vendor/scripts/highlight.pack.js"></script>
@@ -30,5 +32,7 @@
     <script src="vendor/scripts/webdb.js"></script>
     <!--Our scripts-->
     <script src="scripts/cards.js"></script>
+    <script src="scripts/showCards.js"></script>
+    <script src="scripts/cardController.js"></script>
   </body>
 </html>
