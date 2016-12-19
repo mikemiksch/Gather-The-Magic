@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gather The Magic</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script id="card-data-template" type="text/x-handlebars-template">
+      <section class="card-data">
+        <img src="{{imageUrl}}">
+        <P>{{name}}</P>
+        <P>{{cmc}}</P>
+        <P>{{colors}}</P>
+        <P>{{type}}</P>
+        <P>{{rarity}}</P>
+        <P>{{text}}</P>
+        <P>{{power}}</P>
+        <P>{{toughness}}</P>
+      </section>
+    </script>
   </head>
   <body>
-    <script src="scripts/script.js"></script>
+    <!--Vendor scripts-->
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="vendor/scripts/highlight.pack.js"></script>
+    <script src="vendor/scripts/html5sql.js"></script>
+    <script src="vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="vendor/scripts/marked.js"></script>
+    <script src="vendor/scripts/page.js"></script>
+    <script src="vendor/scripts/webdb.js"></script>
+    <!--Our scripts-->
+    <script src="scripts/cards.js"></script>
   </body>
 </html>

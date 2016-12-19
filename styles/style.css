@@ -1,5 +1,5 @@
 html {
-  background-image: url('/vendor/assets/images/magicDesktop.jpg');
+  background-image: url('../vendor/assets/images/magicDesktop.jpg');
   background-repeat: no-repeat;
   background-size:cover;
   background-position:center;
