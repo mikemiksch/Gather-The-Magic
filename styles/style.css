@@ -1,0 +1,11 @@
+* {
+  background-image: url('/vendor/assets/magicDesktop.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  min-height: 100%;
+  height: 100%;
+  margin-bottom: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
