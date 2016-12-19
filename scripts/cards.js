@@ -17,8 +17,8 @@
         'types VARCHAR(50) NOT NULL, ' +
         'rarity VARCHAR(50) NOT NULL, ' +
         'text VARCHAR(500) NOT NULL, ' +
-        'power INTEGER NOT NULL, ' +
-        'toughness INTEGER NOT NULL);',
+        'power VARCHAR, ' +
+        'toughness VARCHAR);',
       callback
     );
   };
@@ -88,6 +88,12 @@
     });
   };
 
+  Card.clearPowerToughness = function() {
+    webDB.execute('UPDATE searchResults SET power = "" WHERE power = "undefined"', function() {
+      webDB.execute('UPDATE searchResults SET toughness = "" WHERE toughness = "undefined"');
+    });
+  };
+
   Card.loadTable = function(callback) {
     buildString();
     var JSONdata = [];
@@ -97,11 +103,10 @@
         function(rows) {
           if(rows.length) {
             Card.loadResults(rows);
-            // callback();
+            callback();
           } else {
             $.getJSON(queryString, function(data) {
-              JSONdata.push($.getJSON(queryString));
-              JSONdata.forEach(function(item) {
+              data.cards.forEach(function(item) {
                 var card = new Card(item);
                 card.generateRow();
               });
@@ -114,6 +119,7 @@
             });
           }
         });
+    Card.clearPowerToughness();
   };
 
   module.Card = Card;
