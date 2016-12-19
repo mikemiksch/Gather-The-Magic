@@ -26,9 +26,9 @@
   Card.prototype.generateRow = function(callback) {
     webDB.execute(
       [{
-        'sql': 'INSERT INTO cards ' +
+        'sql': 'INSERT INTO searchResults ' +
         '(name, cmc, colors, types, rarity, text, power, toughness) ' +
-        'VALUES (?, ?, ?, ?, ?, ?, ?);',
+        'VALUES (?, ?, ?, ?, ?, ?, ?, ?);',
         'data':
           [this.name,
           this.cmc,
@@ -90,24 +90,26 @@
 
   Card.loadTable = function(callback) {
     buildString();
+    var JSONdata = [];
     console.log(queryString);
     webDB.execute(
       'SELECT * FROM searchResults ORDER BY name DESC',
         function(rows) {
-          if(rows.legnth) {
-            Card.loadTable(rows);
-            callback();
+          if(rows.length) {
+            Card.loadResults(rows);
+            // callback();
           } else {
             $.getJSON(queryString, function(data) {
-              data.forEach(function(item) {
+              JSONdata.push($.getJSON(queryString));
+              JSONdata.forEach(function(item) {
                 var card = new Card(item);
                 card.generateRow();
               });
               webDB.execute(
-                'SELECT * FROM cards ORDER BY name DESC',
+                'SELECT * FROM searchResults ORDER BY name DESC',
                 function(rows) {
                   Card.loadResults(rows);
-                  callback();
+                  // callback();
                 });
             });
           }
