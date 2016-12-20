@@ -10,38 +10,23 @@
 }
 #outerBorder {
   border: 13px solid black;
-  height: 350px;
-  width: 250px;
+  height: 24em;
+  width: 21em;
   border-radius:10px;
-  background: url('https://lh4.googleusercontent.com/-DfSqa0PEknc/UunTaauu7xI/AAAAAAAAHBM/A8WBOvIlk3s/w506-h930/HHO+Sliver.png') scroll repeat;
-  background-size: 230px;
-  background-position: 50% 20%;
-
+  margin: auto;
 }
 
 #titleBorder {
-  border: 3px solid white;
-  height: 27px;
-  width: 239px;
-  border-radius: 10px;
-  margin: 5px 0px 0px 2px;
+  margin: 5px auto 0;
 }
 
 #title, #type {
   border: 2px solid black;
-  height: 25px;
-  width: 235px;
+  height: 1.5em;
+  width: 16em;
   position: relative;
-  margin: 0px 0px 0px 0px;
+  margin: auto;
   border-radius: 10px;
-}
-
-.mana {
-  border: none;
-  height: 22px;
-  width: 50px;
-  margin-top: 2px;
-  float: right;
 }
 
 #outerBorder p {
@@ -51,50 +36,19 @@
   float:left;
 }
 
- #outerBorder img {
-   height: 15px;
-   margin: -2px ;
- }
-
-#image img {
-  height: 163px;
-  margin: 3px 0px 0px 2px;
-  border: 1px solid black;
-
-}
 .body {
-  width: 230px;
-  height: 170px;
-  border-left:1px solid black;
-  background-color:#ffffff;
-  margin-left:5px;
+  margin: 0 auto;
+  width: 15em;
+  height: 11em;
+  border:1px solid black;
   padding: 0px;
   border-radius: 10px;
-  vertical-align: middle;
-  position:relative;
-  display:inline-block;
 }
 
-#creatureBorder {
-  border: 3px solid white;
-  height: 29px;
-  width: 239px;
-  border-radius: 10px;
-  margin: -3px 0px 0px -2px;
+#cmcInput, #powerInput, #toughInput {
+  width: 1.5em;
 }
 
-#textbox {
-
-}
-
-#textbox p {
-  font-size:10px;
-  font-family: mplantin, serif;
-  float:right;
-  align: justified;
-}
-
-#textbox p:first-of-type {
-  float: left;
-  margin: 0px 0px -10px 0px;
+#powerTough {
+  display: inline-block;
 }
