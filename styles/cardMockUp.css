@@ -1,0 +1,212 @@
+.cardMockUp {
+  display: block;
+  height: 300px;
+  width: 200px;
+  padding: 5px;
+  margin: 70px auto;
+  border: solid 9px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background-color: grey;
+  transform: rotate(2deg);
+  -moz-box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+  box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+}
+.cardMockUp:hover {
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.mike-background {
+  background-image: url("https://avatars2.githubusercontent.com/u/21977107?v=3&s=400");
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 186px;
+  height: 123px;
+  margin-top: -15px;
+}
+.thomas-background {
+  background-image: url("https://avatars1.githubusercontent.com/u/22163789?v=3&s=460");
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 186px;
+  height: 123px;
+  margin-top: -15px;
+}
+.jaren-background {
+  background-image: url("https://avatars1.githubusercontent.com/u/19315840?v=3&s=400");
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 186px;
+  height: 123px;
+  margin-top: -15px;
+}
+.david-background {
+  background-image: url("../vendor/assets/images/david.jpg");
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 186px;
+  height: 123px;
+  margin-top: -15px;
+}
+
+.character-background:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 25px;
+  left: 9px;
+  right: 9px;
+  bottom: 158px;
+}
+
+.character-image {
+  width: 64px;
+  height: 64px;
+  /*background-image: url("../vendor/assets/images/david.jpg");*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 34px;
+}
+
+.character-background:hover .character-image {
+  /*background-image: url("../vendor/assets/images/david.jpg");*/
+}
+
+.character-name {
+  margin-top: -1px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding-left: 5px;
+  height: 18px;
+}
+
+.character-name:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  left: 4px;
+  right: 4px;
+  bottom: 285px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.character-type {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding-left: 5px;
+  height: 18px;
+  margin-top: 1px;
+}
+
+.character-type:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 149px;
+  left: 4px;
+  right: 4px;
+  bottom: 138px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.character-desc {
+  padding: 8px;
+  height: 107px;
+  width: 171px;
+  margin-top: -15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.character-desc:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 171px;
+  left: 9px;
+  right: 9px;
+  bottom: 12px;
+}
+
+.character-stats {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  display: block;
+  float: right;
+  height: 18px;
+  width: 30px;
+  margin-top: -10px;
+  margin-right: 10px;
+  text-align: center;
+  z-index: 5;
+}
+
+.character-stats:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 286px;
+  left: 162px;
+  right: 14px;
+  bottom: 2px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.character-stats, .character-name, .character-desc, .character-type {
+  background-color: lightgray;
+  -moz-box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+  box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+}
+
+.character-stats:before, .character-desc:before, .character-type:before, .character-name:before, .character-background:before {
+  border: 3px solid #beb4be;
+  background-color: lightgray;
+  -moz-box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+  box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
+}
+
+.character-stats, .character-desc, .character-type, .character-name, .character-background {
+  border: solid rgba(39, 39, 39, 0.69) 1px;
+}
+
+.card p {
+  display: block;
+  text-shadow: 0px 0px 1px rgba(119, 119, 119, 0.33);
+  color: #463f30;
+}
