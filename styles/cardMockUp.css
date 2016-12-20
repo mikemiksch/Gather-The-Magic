@@ -3,7 +3,7 @@
   height: 300px;
   width: 200px;
   padding: 5px;
-  margin: 70px auto;
+  margin: 10px auto;
   border: solid 9px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -205,8 +205,8 @@
   border: solid rgba(39, 39, 39, 0.69) 1px;
 }
 
-.card p {
-  display: block;
+.card p, ul {
+  display: inline;
   text-shadow: 0px 0px 1px rgba(119, 119, 119, 0.33);
   color: #463f30;
 }
