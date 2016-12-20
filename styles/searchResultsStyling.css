@@ -1,0 +1,93 @@
+.card-data {
+  /*background-color: black;*/
+  min-width: 300px;
+  /*max-width: 532px;*/
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;;
+  padding: 0;
+}
+
+.expanded-info {
+  width: 100%;
+  padding: 0;
+}
+
+.name-cost {
+  background-color: red;
+  text-align: left;
+  max-width: 532px;
+  margin: 0 auto;
+}
+
+.card-name {
+  background-color: blue;
+  display: inline-block;
+  margin: 0;
+}
+
+.mana-cost {
+  background-color: yellow;
+  display: inline-block;
+  float: right;
+}
+
+.card-image img {
+  width: 266px;
+  height: 311px;
+}
+
+.card-image {
+  display: inline-block;
+  margin: 0 auto;
+  width:266px;
+  height: 311px;
+}
+
+.data-block {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  max-width: 266px;
+}
+
+.color-type {
+  background-color: green;
+  width: 100%
+}
+
+.card-color {
+  background-color: purple;
+  display: inline-block;
+  float: left;
+}
+
+.card-type {
+  background-color: orange;
+  display: inline-block;
+  float: right;
+}
+
+.card-text {
+  clear: both;
+  background-color: gray;
+  width: 266px;
+  text-align: left;
+}
+
+.rarity-stats {
+  clear: both;
+  background-color: white;
+  width: 100%
+}
+
+.card-rarity {
+  background-color: lightyellow;
+  float: left;
+}
+
+.power-toughness {
+  background-color: magenta;
+  float: right;
+}
