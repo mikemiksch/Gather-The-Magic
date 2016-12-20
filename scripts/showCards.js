@@ -1,20 +1,17 @@
-(function(module) {
+var showCards = {};
 
-  var showCards = {};
+var renderResults = function(card) {
+  var template = Handlebars.compile($('#card-data-template').text());
+  return template(card);
+};
 
-  var renderResults = function(card) {
-    var template = Handlebars.compile($('#card-data-template').text());
-    return template(card);
-  };
+showCards.listAll = function() {
+  Card.searchResults.forEach(function(x) {
+    $('#cards').append(renderResults(x, '#card-data-template'));
+  });
+};
 
-  showCards.listAll = function() {
-    Card.searchResults.forEach(function(x) {
-      console.log('Firing Card.searchResults.forEach');
-      $('#cards').append(renderResults(x, '#card-data-template'));
-    });
-  };
-
+getResults = function() {
   Card.createTable();
   Card.loadTable();
-  module.showCards = showCards;
-})(window);
+};
