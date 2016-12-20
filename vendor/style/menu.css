@@ -120,7 +120,7 @@ a:hover{
 
 
 
-@media(min-width:770px){
+@media(min-width:890px){
   .navbar{
     height:60px;
     background:linear-gradient(#494a4d, #404343);
