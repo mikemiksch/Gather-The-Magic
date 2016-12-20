@@ -3,13 +3,13 @@ function Card(options) {
   Object.keys(options).forEach(function(e, indx, keys) {
     this[e] = options[e];
     if(typeof this.power === 'undefined') {
-      this.power = '';
+      this.power = 'NA';
     }
     if(typeof this.toughness === 'undefined') {
-      this.toughness = '';
+      this.toughness = 'NA';
     }
     if(typeof this.cmc === 'undefined') {
-      this.cmc === '';
+      this.cmc = 'NA';
     }
     if(typeof this.colors === 'undefined') {
       this.colors = '';
@@ -25,7 +25,7 @@ Card.createTable = function(callback) {
     'CREATE TABLE searchResults (' +
       'id INTEGER PRIMARY KEY, ' +
       'name VARCHAR(50) NOT NULL, ' +
-      'cmc VARCHAR(50) NOT NULL, ' +
+      'cmc VARCHAR(2) NOT NULL, ' +
       'colors VARCHAR(50) NOT NULL, ' +
       'types VARCHAR(50) NOT NULL, ' +
       'rarity VARCHAR(50) NOT NULL, ' +
@@ -70,7 +70,7 @@ var queryString = 'https://api.magicthegathering.io/v1/cards';
 
 buildString = function() {
   if(typeof name !== 'undefined') {
-    name = name.split(' ').join('+');
+    // name = name.split(' ').join('+');
     queryString = queryString.concat('?page=' + name);
   }
   if(typeof cmc !== 'undefined') {
@@ -86,7 +86,7 @@ buildString = function() {
     queryString = queryString.concat('?rarity=' + rarity);
   }
   if(typeof text !== 'undefined') {
-    text = text.split(' ').join('+');
+    // text = text.split(' ').join('+');
     queryString = queryString.concat('?text=' + text);
   }
   if(typeof power !== 'undefined') {

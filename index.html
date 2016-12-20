@@ -9,15 +9,40 @@
     <link rel="stylesheet" href="vendor/style/menu.css">
     <script id="card-data-template" type="text/x-handlebars-template">
       <section class="card-data">
-        <img src="{{imageUrl}}">
-        <P>{{name}}</P>
-        <P>{{cmc}}</P>
-        <P>{{colors}}</P>
-        <P>{{type}}</P>
-        <P>{{rarity}}</P>
-        <P>{{text}}</P>
-        <P>{{power}}</P>
-        <P>{{toughness}}</P>
+        <section class="name-cost">
+          <div section="card-name">
+            <P>{{name}}</P>
+          </div>
+          <div class="mana-cost">
+            <P>Total Mana Cost: {{cmc}}</P>
+          </div>
+        </section>
+        <section class="expanded-info">
+          <section class="card-image">
+            <img src="{{imageUrl}}">
+          </section>
+          <section class="data-block">
+            <section class="color-type">
+              <div class="card-color">
+                <P>{{colors}}</P>
+              </div>
+              <div class="card-type">
+                <P>{{type}}</P>
+              </div>
+            </section>
+            <section class="card-text">
+              <P>{{text}}</P>
+            </section>
+            <section class="rarity-stats">
+              <div class="card-rarity">
+                <P>{{rarity}}</P>
+              </div>
+              <div class="power-toughness">
+                <P>{{power}}/{{toughness}}</P>
+              </div>
+            </section>
+          </section>
+        </section>
       </section>
     </script>
   </head>
