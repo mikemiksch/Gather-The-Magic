@@ -1,4 +1,5 @@
 html {
+  font-family: 'Goudy Bookletter 1911', serif;
   background-image: url('../vendor/assets/images/magicDesktop.jpg');
   background-repeat: no-repeat;
   background-size:cover;
@@ -14,6 +15,7 @@ html {
 /*Form*/
 
 body {
+  font-family: 'Goudy Bookletter 1911', serif;
   background: #FAFAFA;
   opacity: 0.9;
   margin-top: 15%;
@@ -39,11 +41,13 @@ img {
 }
 
 ul, li {
+  font-family: 'Goudy Bookletter 1911', serif;
   list-style-type: none;
   padding-left: 0;
 }
 
 li {
+  font-family: 'Goudy Bookletter 1911', serif;
   display: inline;
 }
 
