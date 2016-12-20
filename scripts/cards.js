@@ -58,14 +58,14 @@ Card.prototype.generateRow = function(callback) {
   );
 };
 
-var name = $('#name').val();
-var cmc = $('#cmc').val();
-var colors = $('#colors').val();
-var types = $('#types').val();
-var rarity = $('#rarity').val();
-var text = $('#text').val();
-var power = $('#power').val();
-var toughness = $('#toughness').val();
+var name = $('#titleInput').val();
+var cmc = $('#cmcInput').val();
+var colors = $('#colorSelect').val();
+var types = $('#typeLine').val();
+var rarity = $('#raritySelect').val();
+var text = $('#flavor').val();
+var power = $('#powerInput').val();
+var toughness = $('#toughInput').val();
 var queryString = 'https://api.magicthegathering.io/v1/cards';
 
 buildString = function() {
