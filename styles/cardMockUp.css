@@ -2,10 +2,10 @@
   display: inline-block;
   height: 300px;
   width: 200px;
-  padding: .5px;
-  margin: 60px auto;
-  margin-right: 20px auto;
-  margin-left: 20px auto;
+  padding: .01px;
+  margin: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
   border: solid 9px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -223,6 +223,6 @@
 }
 
 .fixMock {
-  padding-right: 19.7%;
-  padding-left: 19.7%;
+  padding-right: 17.7%;
+  padding-left: 17.7%;
 }
