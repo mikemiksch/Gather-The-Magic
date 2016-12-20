@@ -2,6 +2,18 @@
 function Card(options) {
   Object.keys(options).forEach(function(e, indx, keys) {
     this[e] = options[e];
+    if(typeof this.power === 'undefined') {
+      this.power = '';
+    }
+    if(typeof this.toughness === 'undefined') {
+      this.toughness = '';
+    }
+    if(typeof this.cmc === 'undefined') {
+      this.cmc === '';
+    }
+    if(typeof this.colors === 'undefined') {
+      this.colors = '';
+    }
   }, this);
 }
 
@@ -26,18 +38,6 @@ Card.createTable = function(callback) {
 };
 
 Card.prototype.generateRow = function(callback) {
-  if(typeof this.power === 'undefined') {
-    this.power = '';
-  }
-  if(typeof this.toughness === 'undefined') {
-    this.toughness = '';
-  }
-  if(typeof this.cmc === 'undefined') {
-    this.cmc === '';
-  }
-  if(typeof this.colors === 'undefined') {
-    this.colors = '';
-  }
   webDB.execute(
     [{
       'sql': 'INSERT INTO searchResults ' +
