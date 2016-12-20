@@ -16,12 +16,13 @@ html {
 
 body {
   font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 25px;
   background: #FAFAFA;
   opacity: 0.9;
-  margin-top: 15%;
+  margin-top: 1em;
   margin-left: 10%;
   margin-right: 10%;
-  margin-bottom: 15%;
+  /*margin-bottom: 15%;*/
 }
 
 img {
@@ -35,19 +36,21 @@ img {
 
 #appWrapper {
   text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 1px;
+  margin-right: 1px;
   padding-bottom: 1em;
 }
 
 ul, li {
   font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 25px;
   list-style-type: none;
   padding-left: 0;
 }
 
 li {
   font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 25px;
   display: inline;
 }
 
