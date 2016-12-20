@@ -19,7 +19,7 @@ a:hover{
   background:-moz-linear-gradient(#5b5c60, #0f1010);
   font-family:arial;
  }
-.contaier{
+.container{
   margin:auto;
 }
 .navbar-header{
@@ -129,7 +129,7 @@ a:hover{
   font-family:arial;
 
 }
-  .contaier{
+  .container{
     width:750px;
   }
   .navbar-header{
@@ -176,13 +176,13 @@ a:hover{
 
 }
 @media(min-width:990px){
-  .contaier{
+  .container{
     width:950px;
   }
 }
 
 @media(min-width:1200px){
-  .contaier{
+  .container{
     width:1170px;
   }
 }
