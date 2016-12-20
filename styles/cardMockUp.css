@@ -95,6 +95,7 @@
 }
 
 .character-name {
+  font-family: matrixb;
   margin-top: -1px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
