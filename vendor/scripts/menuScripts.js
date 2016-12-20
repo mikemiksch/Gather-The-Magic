@@ -1,3 +1,3 @@
-$(".toggle").click(function(){
+$(".toggle").click(function() {
   $(".navcollaps").toggleClass("show");
 });

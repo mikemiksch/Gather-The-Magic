@@ -34,20 +34,9 @@ img {
   margin-left: 5px;
 }
 
-ul {
+ul, li {
   list-style-type: none;
   padding-left: 0;
-}
-
-.box {
-  margin: 0 auto;
-}
-
-.container-1 {
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
 }
 
 .search {
@@ -55,20 +44,19 @@ ul {
   height: 25px;
   background-color: #2b303b;
   border: none;
-  float: left;
   color: #63717f;
-  padding-left: 45px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  color: #000000;
+  opacity: .5;
 }
 
-.icon {
-  position: absolute;
+/*.icon {
   top: 50%;
   margin-left: 17px;
   margin-top: 17px;
   z-index: 1;
   color: #4f5b66;
-}
+}*/
 /*end form*/
