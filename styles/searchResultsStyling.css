@@ -1,22 +1,29 @@
+@font-face {
+  font-family: "Magic:the Gathering";
+  src: url(../assets/MAGIC.TTF) format("truetype");
+}
+
+#cards {
+  text-align: center;
+}
+
 .card-data {
-  /*background-color: black;*/
-  min-width: 300px;
-  /*max-width: 532px;*/
-  margin: 0 auto;
+  font-family: "Magic:the Gathering";
+  min-width: 266px;
+  margin-top: 20px;
   text-align: center;
   box-sizing: border-box;;
-  padding: 0;
 }
 
 .expanded-info {
   width: 100%;
-  padding: 0;
 }
 
 .name-cost {
   background-color: red;
   text-align: left;
-  max-width: 532px;
+  max-width: 266px;
+  font-size: 110%;
   margin: 0 auto;
 }
 
@@ -46,6 +53,7 @@
 
 .data-block {
   text-align: center;
+  font-size: 125%;
   display: inline-block;
   vertical-align: top;
   margin: 0 auto;
@@ -90,4 +98,11 @@
 .power-toughness {
   background-color: magenta;
   float: right;
+}
+
+@media (min-width: 641px) {
+  .name-cost {
+    max-width: 532px;
+    font-size: 125%;
+  }
 }
