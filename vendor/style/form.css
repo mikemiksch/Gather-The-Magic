@@ -11,7 +11,7 @@
 #outerBorder {
   border: 13px solid black;
   height: 24em;
-  width: 21em;
+  width: 17em;
   border-radius:10px;
   margin: auto;
 }
@@ -20,20 +20,16 @@
   margin: 5px auto 0;
 }
 
-#title, #type {
+#title {
   border: 2px solid black;
-  height: 1.5em;
-  width: 16em;
-  position: relative;
+  height: 1.6em;
+  width: 15.5em;
   margin: auto;
   border-radius: 10px;
 }
 
-#outerBorder p {
-  font-family: mplatin, serif;
-  margin: 3px 0px 0px 2px;
-  font-size: 14px;
-  float:left;
+#titleInput, #cmcInput {
+  vertical-align: middle;
 }
 
 .body {
@@ -49,6 +45,13 @@
   width: 1.5em;
 }
 
+#colorSelect {
+  float: left;
+  margin-left: 2px;
+}
+
 #powerTough {
   display: inline-block;
+  float: right;
+  margin-right: 2px;
 }
