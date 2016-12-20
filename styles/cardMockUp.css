@@ -1,11 +1,9 @@
 .cardMockUp {
-  display: block;
+  display: inline-table;
   height: 300px;
   width: 200px;
-  padding: 5px;
-  /*float:left;
-  position: relative;*/
-  margin: 10px auto;
+  padding: .5px;
+  /*margin: 10px auto;*/
   margin-right: 10px auto;
   margin-left: 10px auto;
   border: solid 9px;
@@ -213,4 +211,8 @@
   display: block;
   text-shadow: 0px 0px 1px rgba(119, 119, 119, 0.33);
   color: #463f30;
+}
+
+.fixMock {
+  padding-left: 250px;
 }
