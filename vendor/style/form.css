@@ -1,0 +1,54 @@
+@font-face
+{
+  font-family: matrixb;
+  src: url(http://www.angelfire.com/va/planeswlk/matrixb.ttf);
+}
+@font-face
+{
+  font-family: mplantin;
+  src: url(http://www.angelfire.com/va/planeswlk/Mplantin.ttf);
+}
+#outerBorder {
+  border: 13px solid black;
+  height: 24em;
+  width: 21em;
+  border-radius:10px;
+  margin: auto;
+}
+
+#titleBorder {
+  margin: 5px auto 0;
+}
+
+#title, #type {
+  border: 2px solid black;
+  height: 1.5em;
+  width: 16em;
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#outerBorder p {
+  font-family: mplatin, serif;
+  margin: 3px 0px 0px 2px;
+  font-size: 14px;
+  float:left;
+}
+
+.body {
+  margin: 0 auto;
+  width: 15em;
+  height: 11em;
+  border:1px solid black;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+#cmcInput, #powerInput, #toughInput {
+  width: 1.5em;
+}
+
+#powerTough {
+  display: inline-block;
+}

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="vendor/style/menu.css">
     <link rel="stylesheet" href="vendor/assets/fonts/node_modules/mana-font/css/mana.css">
+    <link rel="stylesheet" href="vendor/style/form.css">
+
     <script id="card-data-template" type="text/x-handlebars-template">
       <section class="card-data">
         <img src="{{imageUrl}}">
@@ -44,42 +46,85 @@
       </div><!-- contaier -->
     </div><!-- navbar -->
 
+    <div id="appWrapper">
+      <img src="/vendor/assets/images/GatherMagicRemix.png" class="imageTop">
+      <ul class="list-unstyled list-group">
+        <li class="list-group-item">
+          <img src="/vendor/assets/images/green.png">
+        </li>
+        <li class="list-group-item">
+          <img src="/vendor/assets/images/red.png">
+        </li>
+        <li class="list-group-item">
+          <img src="/vendor/assets/images/blue.png">
+        </li>
+        <li class="list-group-item">
+          <img src="/vendor/assets/images/yellow.png"/>
+        </li>
+        <li class="list-group-item">
+          <img src="/vendor/assets/images/black.png">
+        </li>
+      </ul>
 
-    <div class="container-fluid">
-      <div id="appWrapper">
-        <img src="/vendor/assets/images/GatherMagicRemix.png" class="imageTop">
-        <ul class="list-unstyled list-group">
-          <li class="list-group-item">
-            <img src="/vendor/assets/images/green.png">
-          </li>
 
-          <li class="list-group-item">
-            <img src="/vendor/assets/images/red.png">
-          </li>
+      <form id="searchForm">
+        <div id="outerBorder">
+        <!-- Title line & CMC-->
+          <div id="titleBorder">
+            <div id="title">
+              <input type="text" id="titleInput" name="title" placeholder="Enter Card Name">
+              CMC:<input type="text" id="cmcInput" name="cmc">
+            </div>
+          </div>
+        <!-- Body image -->
+          <div class="body">
+            <img src="http://th03.deviantart.net/fs70/PRE/f/2013/269/5/5/magic_the_gathering__hundred_handed_one_by_cryptcrawler-d6o0qvs.jpg">
+          </div>
+        <!-- Type line & Rarity -->
+          <div id="typeLine">
+            <select id="typeSelect" name="type">
+              <option value="">-Type-</option>
+              <option value="Land">Land</option>
+              <option value="Creature">Creature</option>
+              <option value="Artifact">Artifact</option>
+              <option value="Enchantment">Enchantment</option>
+              <option value="Planeswalker">Planeswalker</option>
+              <option value="Instant">Instant</option>
+              <option value="Sorcery">Sorcery</option>
+            </select>
+            <select id="raritySelect" name="rarity">
+              <option value="">-Rarity-</option>
+              <option value="Common">Common</option>
+              <option value="Uncommon">Uncommon</option>
+              <option value="Rare">Rare</option>
+              <option value="Mythic Rare">Mythic Rare</option>
+            </select>
+          </div>
+         <!-- Text box -->
+          <div id="textbox">
+            <textarea name="abilities" rows="4" cols="30">Enter card abilities</textarea>
+            <textarea name="flavor" rows="2" cols="30">Enter flavor text</textarea>
+          </div>
+          <!-- Color & Power/Toughness -->
+          <select id="colorSelect" name="color">
+            <option value="">-Color-</option>
+            <option value="Green">Green</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+          </select>
+          <div id="powerTough">
+            P:<input id="powerInput" type="text" name="power">
+            T:<input id="toughInput" type="text" name="toughness">
+          </div>
+        </div> <!-- /outerBorder -->
+      </form> <!-- /searchForm -->
 
-          <li class="list-group-item">
-            <img src="/vendor/assets/images/blue.png">
-          </li>
-
-          <li class="list-group-item">
-            <img src="/vendor/assets/images/yellow.png"/>
-          </li>
-
-          <li class="list-group-item">
-            <img src="/vendor/assets/images/black.png">
-          </li>
-
-          <!-- <div id="landWrapper" class="list-group-item">
-          </div> <!-- /landWrapper -->
-        </ul>
-        <div id="searchBox">
-          <span class="icon"><i class="fa fa-search"></i></span>
-          <input type="search" class="search" placeholder="Search...">
-        </div>
-      </div>  <!-- /appWrapper -->
-    </div> <!-- /container-fluid -->
-    <section id="cards">
-    </section>
+    </div>  <!-- /appWrapper -->
+    <!-- <section id="cards">
+    </section> -->
     <!--Vendor scripts-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="vendor/scripts/menuScripts.js"></script>
