@@ -16,6 +16,7 @@ html {
 
 body {
   font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 25px;
   background: #FAFAFA;
   opacity: 0.9;
   margin-top: 1em;
@@ -42,12 +43,14 @@ img {
 
 ul, li {
   font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 25px;
   list-style-type: none;
   padding-left: 0;
 }
 
 li {
   font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 25px;
   display: inline;
 }
 
