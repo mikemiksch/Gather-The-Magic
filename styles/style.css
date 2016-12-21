@@ -4,7 +4,7 @@
 }
 
 html {
-  ont-family: "Planewalker Regular", serif;
+  font-family: "Planewalker Regular", serif;
   background-image: url('../vendor/assets/images/magicDesktop.jpg');
   background-repeat: no-repeat;
   background-size:cover;
@@ -44,7 +44,8 @@ body {
 }
 
 .body img {
-  max-height: 176px;
+  max-height: 275px;
+  max-width: 275px;
 }
 
 .list-group-item img {
