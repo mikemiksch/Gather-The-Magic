@@ -1,11 +1,11 @@
 .cardMockUp {
-  display: inline-table;
+  display: inline-block;
   height: 300px;
   width: 200px;
-  padding: .5px;
-  /*margin: 10px auto;*/
-  margin-right: 10px auto;
-  margin-left: 10px auto;
+  padding: .01px;
+  margin: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
   border: solid 9px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -20,6 +20,7 @@
   -webkit-box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
   box-shadow: inset 10px 10px 17px -3px rgba(0, 0, 0, 0.21);
 }
+
 .cardMockUp:hover {
   -moz-transform: scale(1.25);
   -ms-transform: scale(1.25);
@@ -94,6 +95,8 @@
 }
 
 .character-name {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 17px;
   margin-top: -1px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -117,6 +120,8 @@
 }
 
 .character-type {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 17px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -140,6 +145,8 @@
 }
 
 .character-desc {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 15px;
   padding: 8px;
   height: 107px;
   width: 171px;
@@ -161,6 +168,8 @@
 }
 
 .character-stats {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 10px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -214,5 +223,6 @@
 }
 
 .fixMock {
-  padding-left: 250px;
+  padding-right: 17.7%;
+  padding-left: 17.7%;
 }
