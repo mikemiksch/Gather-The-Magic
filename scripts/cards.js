@@ -73,11 +73,11 @@ var toughness;
 var queryString;
 
 setParameters = function() {
-  queryString = 'https://api.magicthegathering.io/v1/cards';
+  queryString = 'https://api.magicthegathering.io/v1/cards?';
   name = $('#titleInput').val();
   cmc = $('#cmcInput').val();
   colors = $('#colorSelect').val();
-  types = $('#typeLine').val();
+  types = $('#typeSelect').val();
   rarity = $('#raritySelect').val();
   text = $('#flavor').val();
   power = $('#powerInput').val();
@@ -87,35 +87,35 @@ setParameters = function() {
 concatString = function() {
   if(name !== '') {
     console.log(name);
-    queryString = queryString.concat('?name=' + name);
+    queryString = queryString.concat('&name=' + name);
   }
   if(cmc !== '') {
     console.log(cmc);
-    queryString = queryString.concat('?cmc=' + cmc);
+    queryString = queryString.concat('&cmc=' + cmc);
   }
   if(colors !== '') {
     console.log(colors);
-    queryString = queryString.concat('?colors=' + colors);
+    queryString = queryString.concat('&colors=' + colors);
   }
   if(types !== '') {
     console.log(types);
-    queryString = queryString.concat('?types=' + types);
+    queryString = queryString.concat('&types=' + types);
   }
   if(rarity !== '') {
     console.log(rarity);
-    queryString = queryString.concat('?rarity=' + rarity);
+    queryString = queryString.concat('&rarity=' + rarity);
   }
   if(typeof text !== 'undefined') {
     console.log(text);
-    queryString = queryString.concat('?text=' + text);
+    queryString = queryString.concat('&text=' + text);
   }
   if(power !== '') {
     console.log(power);
-    queryString = queryString.concat('?power=' + power);
+    queryString = queryString.concat('&power=' + power);
   }
   if(toughness !== '') {
     console.log(toughness);
-    queryString = queryString.concat('?toughness=' + toughness);
+    queryString = queryString.concat('&toughness=' + toughness);
   }
 };
 
@@ -132,34 +132,29 @@ Card.loadResults = function(rows) {
 
 Card.loadTable = function(callback) {
   buildString();
-  var JSONdata = [];
   console.log(queryString);
   webDB.execute(
-    'SELECT * FROM searchResults ORDER BY name ASC',
-      function(rows) {
-        if(rows.length) {
-          Card.hideSearch();
-          Card.loadResults(rows);
-          showCards.listAll();
-          Card.revealSearch();
-        } else {
-          $.getJSON(queryString, function(data) {
-            data.cards.forEach(function(item) {
-              var card = new Card(item);
-              card.generateRow();
-            });
-            webDB.execute(
-              'SELECT * FROM searchResults ORDER BY name ASC',
-              function(rows) {
-                Card.hideSearch();
-                Card.loadResults(rows);
-                showCards.listAll();
-                cardResults.hideReveal();
-                Card.revealSearch();
-              });
-          });
-        }
+    $.getJSON(queryString, function(data) {
+      data.cards.forEach(function(item) {
+        var card = new Card(item);
+        card.generateRow();
       });
+      webDB.execute(
+        'SELECT * FROM searchResults ORDER BY name ASC',
+        function(rows) {
+          if(!rows.length) {
+            $('#not-found').show();
+          } else {
+            $('#not-found').hide();
+            Card.hideSearch();
+            Card.loadResults(rows);
+            showCards.listAll();
+            cardResults.hideReveal();
+            Card.revealSearch();
+          }
+        });
+    })
+  );
 };
 
 Card.hideSearch = function(){

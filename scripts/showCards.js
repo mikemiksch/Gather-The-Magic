@@ -21,6 +21,7 @@ submitSearch = function() {
   $('#search-submit').on('click', function(e) {
     e.preventDefault();
     $('.card-data').remove();
+    $('#not-found').attr('class', 'hidden');
     getResults();
   });
 };
