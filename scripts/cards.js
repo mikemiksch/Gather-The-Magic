@@ -138,8 +138,10 @@ Card.loadTable = function(callback) {
     'SELECT * FROM searchResults ORDER BY name ASC',
       function(rows) {
         if(rows.length) {
+          Card.hideSearch();
           Card.loadResults(rows);
           showCards.listAll();
+          Card.revealSearch();
         } else {
           $.getJSON(queryString, function(data) {
             data.cards.forEach(function(item) {
@@ -149,11 +151,24 @@ Card.loadTable = function(callback) {
             webDB.execute(
               'SELECT * FROM searchResults ORDER BY name ASC',
               function(rows) {
+                Card.hideSearch();
                 Card.loadResults(rows);
                 showCards.listAll();
                 cardResults.hideReveal();
+                Card.revealSearch();
               });
           });
         }
       });
+};
+
+Card.hideSearch = function(){
+  $('#search-submit').hide();
+  $('#loadingSvg').show();
+
+};
+
+Card.revealSearch = function(){
+  $('#loadingSvg').hide();
+  $('#search-submit').show();
 };
