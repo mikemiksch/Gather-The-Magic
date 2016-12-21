@@ -44,6 +44,10 @@ body {
   max-height: 176px;
 }
 
+.list-group-item img {
+  max-width: 100px;
+}
+
 .imageTop {
   width: 300px;
   padding-left: 20px;

@@ -1,5 +1,5 @@
-(function(module) {
-
+// (function(module) {
+//
   var cardResults = {};
 
   cardResults.hideData = function() {
@@ -10,6 +10,6 @@
       $(this).siblings().show();
     });
   };
-
-  module.cardResults = cardResults;
-})(window);
+//
+//   module.cardResults = cardResults;
+// })(window);

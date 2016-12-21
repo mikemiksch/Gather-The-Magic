@@ -14,4 +14,14 @@ showCards.listAll = function() {
 getResults = function() {
   Card.createTable();
   Card.loadTable();
+  cardResults.hideData();
 };
+
+submitSearch = function() {
+  $('#search-submit').on('click', function(e) {
+    e.preventDefault();
+    getResults();
+  });
+};
+
+submitSearch();

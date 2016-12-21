@@ -58,43 +58,65 @@ Card.prototype.generateRow = function(callback) {
   );
 };
 
-var name = $('#titleInput').val();
-var cmc = $('#cmcInput').val();
-var colors = $('#colorSelect').val();
-var types = $('#typeLine').val();
-var rarity = $('#raritySelect').val();
-var text = $('#flavor').val();
-var power = $('#powerInput').val();
-var toughness = $('#toughInput').val();
+var name;
+var cmc;
+var colors;
+var types;
+var rarity;
+var text;
+var power;
+var toughness;
 var queryString = 'https://api.magicthegathering.io/v1/cards';
 
-buildString = function() {
+setParameters = function() {
+  var name = $('#titleInput').val();
+  var cmc = $('#cmcInput').val();
+  var colors = $('#colorSelect').val();
+  var types = $('#typeLine').val();
+  var rarity = $('#raritySelect').val();
+  var text = $('#flavor').val();
+  var power = $('#powerInput').val();
+  var toughness = $('#toughInput').val();
+};
+
+concatString = function() {
   if(typeof name !== 'undefined') {
-    // name = name.split(' ').join('+');
+    console.log(name);
     queryString = queryString.concat('?page=' + name);
   }
   if(typeof cmc !== 'undefined') {
+    console.log(cmc);
     queryString = queryString.concat('?cmc=' + cmc);
   }
   if(typeof colors !== 'undefined') {
+    console.log(colors);
     queryString = queryString.concat('?colors=' + colors);
   }
   if(typeof types !== 'undefined') {
+    console.log(types);
     queryString = queryString.concat('?types=' + types);
   }
   if(typeof rarity !== 'undefined') {
+    console.log(rarity);
     queryString = queryString.concat('?rarity=' + rarity);
   }
   if(typeof text !== 'undefined') {
-    // text = text.split(' ').join('+');
+    console.log(text);
     queryString = queryString.concat('?text=' + text);
   }
   if(typeof power !== 'undefined') {
+    console.log(power);
     queryString = queryString.concat('?power=' + power);
   }
   if(typeof toughness !== 'undefined') {
+    console.log(toughness);
     queryString = queryString.concat('?toughness=' + toughness);
   }
+};
+
+buildString = function() {
+  setParameters();
+  concatString();
 };
 
 Card.loadResults = function(rows) {
