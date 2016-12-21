@@ -49,6 +49,15 @@
             </section>
           </section>
         </section>
+        <section class="ebay-listing">
+          <P>Find {{name}} on eBay</P>
+          <script>
+            var cardName = '{{name}}';
+            var nameSplit = cardName.split(' ');
+            var searchTerm = nameSplit.join('%20');
+            $.getScript('scripts/ebayApi.js');
+          </script>
+        </section>
       </section>
     </script>
   </head>

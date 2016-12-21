@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Magic:the Gathering";
-  src: url(../assets/MAGIC.TTF) format("truetype");
+  font-family: "Planewalker Regular";
+  src: url(../assets/Planewalker.otf) format("opentype");
 }
 
 html {
