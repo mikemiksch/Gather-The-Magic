@@ -1,15 +1,19 @@
-// (function(module) {
-//
+(function(module) {
+
   var cardResults = {};
 
-  cardResults.hideData = function() {
-    $('.expanded-info').show().hide();
+  cardResults.hideReveal = function() {
     $('.name-cost').on('click', function(e) {
+      console.log('onclick firing');
       e.preventDefault();
-      $('.expanded-info').hide();
-      $(this).siblings().show();
+      if ($(this).siblings().hasClass('reveal')) {
+        $('.reveal').attr('class', 'hidden');
+      } else {
+        $(this).siblings().attr('class', 'reveal');
+      }
     });
   };
-//
-//   module.cardResults = cardResults;
-// })(window);
+
+  // cardResults.hideReveal();
+  module.cardResults = cardResults;
+})(window);

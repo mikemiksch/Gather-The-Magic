@@ -151,6 +151,7 @@ Card.loadTable = function(callback) {
               function(rows) {
                 Card.loadResults(rows);
                 showCards.listAll();
+                cardResults.hideReveal();
               });
           });
         }
