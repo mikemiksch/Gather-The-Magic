@@ -144,6 +144,7 @@ Card.loadTable = function(callback) {
         function(rows) {
           if(!rows.length) {
             $('#not-found').show();
+            Card.revealSearch();
           } else {
             $('#not-found').hide();
             Card.hideSearch();
