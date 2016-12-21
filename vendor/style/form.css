@@ -10,8 +10,8 @@
 }
 #outerBorder {
   border: 13px solid black;
-  height: 25em;
-  width: 21em;
+  height: 18em;
+  width: 14em;
   border-radius:10px;
   margin: auto;
 }
@@ -23,7 +23,7 @@
 #title {
   border: 2px solid black;
   height: 1.6em;
-  width: 15.5em;
+  width: 13em;
   margin: auto;
   border-radius: 10px;
 }
@@ -34,7 +34,7 @@
 
 .body {
   margin: 0 auto;
-  width: 15em;
+  width: 13em;
   height: 11em;
   border:1px solid black;
   padding: 0px;
@@ -42,16 +42,19 @@
 }
 
 #cmcInput, #powerInput, #toughInput {
-  width: 33px;
+  width: 2em;
 }
 
 #colorSelect {
-  float: left;
   margin-left: 2px;
 }
 
 #powerTough {
-  display: inline-block;
+  display: inline;
   float: right;
   margin-right: 2px;
+}
+
+#raritySelect {
+  display:inline;
 }
