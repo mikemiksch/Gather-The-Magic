@@ -10,8 +10,8 @@
 }
 #outerBorder {
   border: 13px solid black;
-  height: 24em;
-  width: 17em;
+  height: 25em;
+  width: 21em;
   border-radius:10px;
   margin: auto;
 }
@@ -42,7 +42,7 @@
 }
 
 #cmcInput, #powerInput, #toughInput {
-  width: 1.5em;
+  width: 33px;
 }
 
 #colorSelect {
