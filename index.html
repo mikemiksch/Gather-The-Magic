@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gather The Magic</title>
@@ -53,7 +53,7 @@
     </script>
   </head>
   <body>
-      <div class="navbar">
+    <div class="navbar">
       <div class="contaier">
 
         <div class="navbar-header">
@@ -64,10 +64,10 @@
         </div><!-- navbar-header -->
 
           <ul class="nav navcollaps">
-            <li><a href="#"><i class="ms ms-g ms-cost"></i>  Home</a></li>
-            <li><a href="#"><i class="ms ms-r ms-cost"></i>  Search</a></li>
-            <li><a href="#"><i class="ms ms-u ms-cost"></i>  Blah</a></li>
-            <li><a href="../about.html"><i class="ms ms-w ms-cost"></i>  About</a></li>
+            <li><a href="/"><i class="ms ms-g ms-cost"></i>  Home</a></li>
+            <li><a href="#"><i class="ms ms-r ms-cost"></i>  Blah</a></li>
+            <li><a href="/videos"><i class="ms ms-u ms-cost"></i>  Videos</a></li>
+            <li><a href="/about"><i class="ms ms-w ms-cost"></i>  About</a></li>
             <li><a href="https://github.com/mikemiksch/Gather-The-Magic"><i class="ms ms-b ms-cost"></i>  GitHub</a></li>
           </ul>
 
@@ -94,8 +94,7 @@
         </li>
       </ul>
 
-
-      <form id="searchForm">
+      <form id="searchForm" class="tab-content">
         <div id="outerBorder">
         <!-- Title line & CMC-->
           <div id="titleBorder">
@@ -153,7 +152,7 @@
     </div>  <!-- /appWrapper -->
     <section id="cards">
     </section>
-    <section id="video">
+    <section id="videos" class="tab-content">
       <div class="intrinsic-container intrinsic-container-16x9">
         <iframe src="https://www.youtube.com/embed/GadqHggATe8" allowfullscreen></iframe>
       </div>
@@ -162,7 +161,7 @@
       </div>
     </section>
     <!-- /*need to refactor below*/ -->
-    <section>
+    <section id="about" class="tab-content">
       <div class="fixMock">
       <div class="cardMockUp">
         <p class="character-name"><i class="ms ms-r ms-cost"></i>  Killer Mike</p>
@@ -225,5 +224,9 @@
     <script src="scripts/cards.js"></script>
     <script src="scripts/showCards.js"></script>
     <script src="scripts/cardController.js"></script>
+    <script src="scripts/formRevealer.js"></script>
+    <script src="scripts/videosController.js"></script>
+    <script src="scripts/aboutController.js"></script>
+    <script src="scripts/routes.js"></script>
   </body>
   </html>
