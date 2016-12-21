@@ -6,6 +6,7 @@
     $('.name-cost').on('click', function(e) {
       console.log('onclick firing');
       e.preventDefault();
+      $('.reveal').attr('class', 'hidden');
       if ($(this).siblings().hasClass('reveal')) {
         $('.reveal').attr('class', 'hidden');
       } else {
@@ -14,6 +15,5 @@
     });
   };
 
-  // cardResults.hideReveal();
   module.cardResults = cardResults;
 })(window);

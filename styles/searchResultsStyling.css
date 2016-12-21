@@ -107,6 +107,6 @@
 @media (min-width: 641px) {
   .name-cost {
     max-width: 532px;
-    /*font-size: 125%;*/
+    font-size: 100%;
   }
 }
