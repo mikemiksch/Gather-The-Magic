@@ -1,14 +1,18 @@
 @font-face {
-  font-family: "Magic:the Gathering";
-  src: url(../assets/MAGIC.TTF) format("truetype");
+  font-family: "Planewalker Regular";
+  src: url(../assets/Planewalker.otf) format("opentype");
 }
 
 #cards {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .card-data {
-  font-family: "Magic:the Gathering";
+  font-family: "Planewalker Regular", serif;
   min-width: 266px;
   margin-top: 20px;
   text-align: center;
@@ -23,7 +27,7 @@
   text-align: left;
   max-width: 266px;
   margin: 0 auto;
-  font-size: 75%;
+  font-size: 50%;
 }
 
 .name-cost, .color-type, .card-text, .rarity-stats {
@@ -59,7 +63,7 @@
 
 .data-block {
   text-align: center;
-  font-size: 125%;
+  /*font-size: 125%;*/
   display: inline-block;
   vertical-align: top;
   margin: 0 auto;
@@ -103,6 +107,6 @@
 @media (min-width: 641px) {
   .name-cost {
     max-width: 532px;
-    font-size: 125%;
+    font-size: 100%;
   }
 }

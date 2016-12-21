@@ -14,7 +14,6 @@ showCards.listAll = function() {
 getResults = function() {
   Card.createTable();
   Card.loadTable();
-  cardResults.hideData();
 };
 
 submitSearch = function() {
