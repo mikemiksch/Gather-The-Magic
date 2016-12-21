@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: 'Goudy Bookletter 1911', serif;
+  ont-family: "Planewalker Regular", serif;
   background-image: url('../vendor/assets/images/magicDesktop.jpg');
   background-repeat: no-repeat;
   background-size:cover;
@@ -20,7 +20,7 @@ html {
 /*Form*/
 
 body {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: "Planewalker Regular", serif;
   font-size: 25px;
   background: #FAFAFA;
   opacity: 0.9;
@@ -64,14 +64,14 @@ body {
 }
 
 ul, li {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: "Planewalker Regular", serif;
   font-size: 25px;
   list-style-type: none;
   padding-left: 0;
 }
 
 li {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: "Planewalker Regular", serif;
   font-size: 25px;
   display: inline;
 }

@@ -17,7 +17,7 @@ a:hover{
   background:linear-gradient(#5b5c60, #0f1010);
   background:-webkit-linear-gradient(#5b5c60, #0f1010);
   background:-moz-linear-gradient(#5b5c60, #0f1010);
-  font-family: 'Goudy Bookletter 1911', serif;
+  ont-family: "Planewalker Regular", serif;
   font-size: 25px;
 }
 .contaier{
@@ -27,7 +27,7 @@ a:hover{
   padding:0 0;
 }
 .navbar-brand{
-  font-family: 'Goudy Bookletter 1911', serif;
+  ont-family: "Planewalker Regular", serif;
   font-size: 25px;
   color:#e5e7ee;
   padding:0 20px 0px 20px;
@@ -128,7 +128,7 @@ a:hover{
     background:linear-gradient(#494a4d, #404343);
     background:-webkit-linear-gradient(#494a4d, #404343);
     background:-moz-linear-gradient(#494a4d, #404343);
-    font-family: 'Goudy Bookletter 1911', serif;
+    ont-family: "Planewalker Regular", serif;
     font-size: 25px;
 
   }
