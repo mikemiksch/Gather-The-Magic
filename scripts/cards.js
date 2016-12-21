@@ -134,26 +134,23 @@ Card.loadTable = function(callback) {
   buildString();
   console.log(queryString);
   webDB.execute(
-    'SELECT * FROM searchResults ORDER BY name ASC',
-      function(rows) {
-        if(rows.length) {
-          Card.loadResults(rows);
-          showCards.listAll();
-        } else {
-          $.getJSON(queryString, function(data) {
-            data.cards.forEach(function(item) {
-              var card = new Card(item);
-              card.generateRow();
-            });
-            webDB.execute(
-              'SELECT * FROM searchResults ORDER BY name ASC',
-              function(rows) {
-                Card.loadResults(rows);
-                showCards.listAll();
-                cardResults.hideReveal();
-
-              });
-          });
-        }
+    $.getJSON(queryString, function(data) {
+      data.cards.forEach(function(item) {
+        var card = new Card(item);
+        card.generateRow();
       });
+      webDB.execute(
+        'SELECT * FROM searchResults ORDER BY name ASC',
+        function(rows) {
+          if(!rows.length) {
+            $('#not-found').show();
+          } else {
+            $('#not-found').hide();
+            Card.loadResults(rows);
+            showCards.listAll();
+            cardResults.hideReveal();
+          }
+        });
+    })
+  );
 };

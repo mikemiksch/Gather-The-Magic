@@ -6,11 +6,7 @@
     $('.name-cost').on('click', function(e) {
       e.preventDefault();
       $('.reveal').attr('class', 'hidden');
-      if ($(this).siblings().hasClass('reveal')) {
-        $(this).siblings().attr('class', 'hidden');
-      } else {
-        $(this).siblings().attr('class', 'reveal');
-      }
+      $(this).siblings().toggle();
     });
   };
 

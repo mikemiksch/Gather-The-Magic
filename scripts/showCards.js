@@ -12,7 +12,6 @@ showCards.listAll = function() {
 };
 
 getResults = function() {
-  Card.hideSearch();
   Card.createTable();
   Card.loadTable();
 };
