@@ -1,0 +1,23 @@
+{
+  "name": "gatherthemagic",
+  "version": "1.0.0",
+  "description": "code fellows final project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikemiksch/Gather-The-Magic.git"
+  },
+  "author": "Mike, Jaren, Thomas, David",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikemiksch/Gather-The-Magic/issues"
+  },
+  "homepage": "https://github.com/mikemiksch/Gather-The-Magic/blob/master/README.md",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-request-proxy": "^2.0.0"
+  }
+}
