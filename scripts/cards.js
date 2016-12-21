@@ -146,11 +146,24 @@ Card.loadTable = function(callback) {
             $('#not-found').show();
           } else {
             $('#not-found').hide();
+            Card.hideSearch();
             Card.loadResults(rows);
             showCards.listAll();
             cardResults.hideReveal();
+            Card.revealSearch();
           }
         });
     })
   );
+};
+
+Card.hideSearch = function(){
+  $('#search-submit').hide();
+  $('#loadingSvg').show();
+
+};
+
+Card.revealSearch = function(){
+  $('#loadingSvg').hide();
+  $('#search-submit').show();
 };
