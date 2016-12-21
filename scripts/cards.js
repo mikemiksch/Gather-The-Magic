@@ -14,6 +14,9 @@ function Card(options) {
     if(typeof this.colors === 'undefined') {
       this.colors = '';
     }
+    if(typeof this.imageUrl === 'undefined') {
+      this.imageUrl = 'assets/default.png';
+    }
   }, this);
 }
 
@@ -23,7 +26,7 @@ Card.createTable = function(callback) {
   webDB.execute('DROP TABLE IF EXISTS searchResults', callback);
   webDB.execute(
     'CREATE TABLE searchResults (' +
-      'id INTEGER PRIMARY KEY, ' +
+      'id VARCHAR PRIMARY KEY, ' +
       'name VARCHAR(50) NOT NULL, ' +
       'cmc VARCHAR(2) NOT NULL, ' +
       'colors VARCHAR(50) NOT NULL, ' +
@@ -41,10 +44,11 @@ Card.prototype.generateRow = function(callback) {
   webDB.execute(
     [{
       'sql': 'INSERT INTO searchResults ' +
-      '(name, cmc, colors, types, rarity, text, imageUrl, power, toughness) ' +
-      'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);',
+      '(id, name, cmc, colors, types, rarity, text, imageUrl, power, toughness) ' +
+      'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);',
       'data':
-        [this.name,
+        [this.id,
+        this.name,
         this.cmc,
         this.colors,
         this.types,
@@ -66,37 +70,38 @@ var rarity;
 var text;
 var power;
 var toughness;
-var queryString = 'https://api.magicthegathering.io/v1/cards';
+var queryString;
 
 setParameters = function() {
-  var name = $('#titleInput').val();
-  var cmc = $('#cmcInput').val();
-  var colors = $('#colorSelect').val();
-  var types = $('#typeLine').val();
-  var rarity = $('#raritySelect').val();
-  var text = $('#flavor').val();
-  var power = $('#powerInput').val();
-  var toughness = $('#toughInput').val();
+  queryString = 'https://api.magicthegathering.io/v1/cards';
+  name = $('#titleInput').val();
+  cmc = $('#cmcInput').val();
+  colors = $('#colorSelect').val();
+  types = $('#typeLine').val();
+  rarity = $('#raritySelect').val();
+  text = $('#flavor').val();
+  power = $('#powerInput').val();
+  toughness = $('#toughInput').val();
 };
 
 concatString = function() {
-  if(typeof name !== 'undefined') {
+  if(name !== '') {
     console.log(name);
-    queryString = queryString.concat('?page=' + name);
+    queryString = queryString.concat('?name=' + name);
   }
-  if(typeof cmc !== 'undefined') {
+  if(cmc !== '') {
     console.log(cmc);
     queryString = queryString.concat('?cmc=' + cmc);
   }
-  if(typeof colors !== 'undefined') {
+  if(colors !== '') {
     console.log(colors);
     queryString = queryString.concat('?colors=' + colors);
   }
-  if(typeof types !== 'undefined') {
+  if(types !== '') {
     console.log(types);
     queryString = queryString.concat('?types=' + types);
   }
-  if(typeof rarity !== 'undefined') {
+  if(rarity !== '') {
     console.log(rarity);
     queryString = queryString.concat('?rarity=' + rarity);
   }
@@ -104,11 +109,11 @@ concatString = function() {
     console.log(text);
     queryString = queryString.concat('?text=' + text);
   }
-  if(typeof power !== 'undefined') {
+  if(power !== '') {
     console.log(power);
     queryString = queryString.concat('?power=' + power);
   }
-  if(typeof toughness !== 'undefined') {
+  if(toughness !== '') {
     console.log(toughness);
     queryString = queryString.concat('?toughness=' + toughness);
   }

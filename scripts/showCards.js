@@ -20,6 +20,7 @@ getResults = function() {
 submitSearch = function() {
   $('#search-submit').on('click', function(e) {
     e.preventDefault();
+    $('.card-data').remove();
     getResults();
   });
 };
