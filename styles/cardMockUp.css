@@ -95,7 +95,7 @@
 }
 
 .character-name {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: "Planewalker Regular", serif;
   font-size: 17px;
   margin-top: -1px;
   -moz-border-radius: 6px;
@@ -120,7 +120,7 @@
 }
 
 .character-type {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: "Planewalker Regular", serif;
   font-size: 17px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -145,7 +145,7 @@
 }
 
 .character-desc {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: "Planewalker Regular", serif;
   font-size: 15px;
   padding: 8px;
   height: 107px;
@@ -168,7 +168,7 @@
 }
 
 .character-stats {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: "Planewalker Regular", serif;
   font-size: 10px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
