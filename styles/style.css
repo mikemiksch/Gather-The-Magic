@@ -17,8 +17,36 @@ html {
 body {
   font-size: 25px;
   margin-top: 1em;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  /*margin-bottom: 15%;*/
+}
+
+#search-submit, #search-again {
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 0 auto;
+  font-family: "Magic:the Gathering";
+  color: white;
+  font-size: 1.1em;
+  border-style: none;
+  background-color: maroon;
+  margin-top: 10px;
+}
+
+#hidden-search {
+  text-align: center;
+}
+
+#loadingSvg {
+  /*margin: 0 auto;*/
+  text-align: center;
+}
+
+.body img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 ul, li {
@@ -102,4 +130,14 @@ footer {
     opacity: 1;
     z-index: 10;
   }
+}
+
+#credits {
+  text-align: center;
+  display: block;
+}
+
+a.creditLinks:hover {
+  color: black;
+  text-decoration: underline;
 }

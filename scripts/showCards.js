@@ -17,13 +17,35 @@ getResults = function() {
   Card.loadTable();
 };
 
+submitHandler = function(id) {
+  $('#' + id).on('click', function(e) {
+    e.preventDefault();
+    $('#searchForm').toggle();
+    $('.card-data').remove();
+    $('#not-found').attr('class', 'hidden');
+  });
+};
+
 submitSearch = function() {
   $('#search-submit').on('click', function(e) {
     e.preventDefault();
+    $('#searchForm').toggle();
     $('.card-data').remove();
     $('#not-found').attr('class', 'hidden');
     getResults();
   });
 };
 
+submitAgain = function() {
+  $('#search-again').on('click', function(e) {
+    e.preventDefault();
+    $('#searchForm').toggle();
+    $('.card-data').remove();
+    $('#search-again').toggle();
+    $('#not-found').hide();
+    $('#search-submit').show();
+  });
+};
+
 submitSearch();
+submitAgain();

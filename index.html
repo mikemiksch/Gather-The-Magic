@@ -69,10 +69,10 @@
 
           <ul class="nav navcollaps">
             <li><a href="/"><i class="ms ms-g ms-cost"></i>  Home</a></li>
-            <li><a href="#"><i class="ms ms-r ms-cost"></i>  Blah</a></li>
-            <li><a href="/videos"><i class="ms ms-u ms-cost"></i>  Videos</a></li>
-            <li><a href="/about"><i class="ms ms-w ms-cost"></i>  About</a></li>
-            <li><a href="https://github.com/mikemiksch/Gather-The-Magic" target="_blank"><i class="ms ms-b ms-cost"></i>  GitHub</a></li>
+            <li><a href="/videos"><i class="ms ms-r ms-cost"></i>  Videos</a></li>
+            <li><a href="/about"><i class="ms ms-u ms-cost"></i>  About</a></li>
+            <li><a href="/credits"><i class="ms ms-w ms-cost"></i>  Credits</a></li>
+            <li><a href="https://github.com/mikemiksch/Gather-The-Magic"><i class="ms ms-b ms-cost"></i>  GitHub</a></li>
           </ul>
 
       </div><!-- contaier -->
@@ -159,7 +159,9 @@
           </section>
         </div> <!-- /outerBorder -->
       </form> <!-- /searchForm -->
-
+      <section id="hidden-search">
+        <input class="hidden" id="search-again" type=button value="Search Again">
+      </section>
       <section id="cards">
       </section>
       <section id="not-found" class="hidden">
@@ -245,6 +247,14 @@
         </div>
       </div>
       </section>
+      <section id="credits" class="tab-content">
+        <h1>Special Thanks To:</h1>
+        <ul>
+          <p><a class="creditLinks" href="http://magicthegathering.io/">Magic: The Gathering API. </a>Which is a part of... <a class="creditLinks" href="http://company.wizards.com/content/games">Wizards of the Coast</a></p>
+          <p><a class="creditLinks" href="https://github.com/andrewgioia/Mana">Andrew Gioia</a>  Who gave us the Magic Icons. <a class="creditLinks" href="http://andrewgioia.github.io/Mana/index.html">Magic: the Gathering card symbol font.</a></p>
+
+        </ul>
+      </section>
     </div>  <!-- /appWrapper -->
     <footer>&copy; 2016</footer>
     <!-- //refactor above// -->
@@ -265,6 +275,9 @@
     <script src="scripts/formRevealer.js"></script>
     <script src="scripts/videosController.js"></script>
     <script src="scripts/aboutController.js"></script>
+    <script src="scripts/credits.js">
+
+    </script>
     <script src="scripts/routes.js"></script>
     <script src="scripts/carousel.js"></script>
   </body>
