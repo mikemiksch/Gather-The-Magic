@@ -17,7 +17,6 @@ a:hover{
   background:linear-gradient(#5b5c60, #0f1010);
   background:-webkit-linear-gradient(#5b5c60, #0f1010);
   background:-moz-linear-gradient(#5b5c60, #0f1010);
-  ont-family: "Planewalker Regular", serif;
   font-size: 25px;
 }
 .contaier{
@@ -27,8 +26,7 @@ a:hover{
   padding:0 0;
 }
 .navbar-brand{
-  ont-family: "Planewalker Regular", serif;
-  font-size: 25px;
+  font-size: 18px;
   color:#e5e7ee;
   padding:0 20px 0px 20px;
   height: 60px;
@@ -117,18 +115,12 @@ a:hover{
   background: #2d2f2f;
 }
 
-
-
-
-
-
-@media(min-width:980px){
+@media(min-width:768px){
   .navbar{
     height:60px;
     background:linear-gradient(#494a4d, #404343);
     background:-webkit-linear-gradient(#494a4d, #404343);
     background:-moz-linear-gradient(#494a4d, #404343);
-    ont-family: "Planewalker Regular", serif;
     font-size: 25px;
 
   }
@@ -137,6 +129,7 @@ a:hover{
   }
   .navbar-header{
     float:left;
+
   }
   .navbar-header{
     background: rgba(255,255,255, 0.1);
@@ -161,13 +154,13 @@ a:hover{
   .nav > li{
     float:left;
     list-style:none;
-    padding: 5px;
+    padding: 5px 0px;
 
   }
   .nav > li > a{
     border-radius: 5px !important;
     background: transparent;
-    padding:0 15px;
+    padding:0 10px;
     border: none;
   }
   .nav > li > a:hover{
