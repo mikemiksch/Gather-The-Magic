@@ -36,16 +36,24 @@
   width: 2em;
 }
 
-#colorSelect {
-  margin-left: 2px;
-}
-
 #powerTough {
   display: inline;
   float: right;
   margin-right: 2px;
 }
-
+#colorSelect {
+  margin-left: auto;
+  width: 6em;
+}
 #raritySelect {
-  display:inline;
+  margin-left: inherit;
+  width: 6em;
+}
+
+#typeSelect {
+  display: inline-block;
+  width: 6em;
+}
+#typeline {
+  display: inline-block;
 }
