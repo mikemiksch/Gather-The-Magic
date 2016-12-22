@@ -121,3 +121,13 @@ li {
     margin-bottom: 5%;
   }
 }
+
+#credits {
+  text-align: center;
+  display: block;
+}
+
+a.creditLinks:hover {
+  color: black;
+  text-decoration: underline;
+}
