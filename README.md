@@ -6,7 +6,7 @@ Gather The Magic
   What is it?
   -----------
 
-  Gather The Magic is a tool designed for fans of Magic The Gathering
+  Gather The Magic is a tool designed for fans of Magic: The Gathering
   intended to allow a player to research cards by color, name, color
   cost of mana. Our aim is to allow the user to navigate through
   over 16000 cards to maximize their deck with ease.
@@ -14,7 +14,7 @@ Gather The Magic
   The Latest Version
   ------------------
 
-  Details of the latest version can be found on the Apache HTTP
+  Details of the latest version can be found on the HTTP
   server project page under https://github.com/mikemiksch/Gather-The-Magic.
 
   Documentation
