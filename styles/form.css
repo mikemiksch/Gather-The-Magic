@@ -6,8 +6,6 @@
   margin-left: 1%;
   margin-right: 1%;
   font-size: 12px;
-  position: relative;
-  opacity: 1;
 }
 
 #titleBorder {
@@ -62,19 +60,41 @@
 }
 
 #colorSelect {
-  margin-left: 2px;
+  /*margin-left: 2px;*/
+  margin-left: auto;
+  width: 6em;
 }
 
 #raritySelect {
-  display:inline;
+  /*display:inline;*/
+  margin-left: inherit;
+  width: 6em;
+}
+
+#typeSelect {
+  display: inline-block;
+  width: 6em;
+}
+
+#typeline {
+  display: inline-block;
 }
 
 #powerTough {
-  display: inline;
+  display: block;
   margin-right: 2px;
-  position: absolute;
-  bottom: -1px;
-  right: -3px;
+  margin-right: 2px;
+}
+
+#flavor {
+  width: 40%;
+  height: 10%;
+  box-shadow: .01em .01em .01em;
+  border-style: solid;
+  border-color: #000000;
+  border:none;
+  padding: 1em 1em;
+  resize: none;
 }
 
 #submitBox {
@@ -98,6 +118,12 @@
 
 #loadingSvg img {
   margin-top: -2.65em;
+}
+
+@media only screen and (min-width: 362px){
+  #powerTough {
+    display: inline;
+  }
 }
 
 @media only screen and (min-width: 425px){
@@ -128,7 +154,7 @@
   }
 }
 
-@media only screen and (min-width: 890px){
+@media only screen and (min-width: 1100px){
   #outerBorder {
     font-size: 22px;
     margin-left: 30%;
