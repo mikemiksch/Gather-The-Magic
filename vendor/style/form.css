@@ -57,3 +57,12 @@
 #typeline {
   display: inline-block;
 }
+
+#text4 {
+width: 40%;
+height: 10%;
+box-shadow:0.5em 0.5em 2em #333;
+transition: 200ms all ease;
+border:none;
+padding: 1em 1em;
+}
