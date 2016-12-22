@@ -100,12 +100,19 @@
   margin-top: -2.65em;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
+}
+
 @media only screen and (min-width: 425px){
   #outerBorder {
     font-size: 16px;
     margin-left: 5%;
     margin-right: 5%;
   }
+}
 
   #loadingSvg img {
     margin-top: auto;
