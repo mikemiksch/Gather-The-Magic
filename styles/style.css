@@ -43,6 +43,10 @@ body {
   margin-top: 10px;
 }
 
+#hidden-search {
+  text-align: center;  
+}
+
 #loadingSvg {
   /*margin: 0 auto;*/
   text-align: center;

@@ -42,7 +42,8 @@ submitAgain = function() {
     $('#searchForm').toggle();
     $('.card-data').remove();
     $('#search-again').toggle();
-    $('#not-found').attr('class', 'hidden');
+    $('#not-found').hide();
+    $('#search-submit').show();
   });
 };
 
