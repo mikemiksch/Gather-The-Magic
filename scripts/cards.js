@@ -144,14 +144,14 @@ Card.loadTable = function(callback) {
         function(rows) {
           if(!rows.length) {
             $('#not-found').show();
-            Card.revealSearch();
+            Card.revealAgain();
           } else {
             $('#not-found').hide();
             Card.hideSearch();
             Card.loadResults(rows);
             showCards.listAll();
-            cardResults.hideReveal();
-            Card.revealSearch();
+            cardResults.hideRevealResults();
+            Card.revealAgain();
           }
         });
     })
@@ -159,12 +159,12 @@ Card.loadTable = function(callback) {
 };
 
 Card.hideSearch = function(){
-  $('#search-submit').hide();
+  $('#search-submit').toggle();
   $('#loadingSvg').show();
 
 };
 
-Card.revealSearch = function(){
+Card.revealAgain = function(){
   $('#loadingSvg').hide();
-  $('#search-submit').show();
+  $('#search-again').show();
 };

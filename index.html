@@ -130,6 +130,12 @@
               <option value="White">White</option>
               <option value="Black">Black</option>
             </select>
+          </div>
+         <!-- Text box -->
+          <!-- <div id="textbox">
+            <textarea name="abilities" rows="4" cols="30">Enter card abilities</textarea> -->
+            <textarea name="flavor" rows="8" cols="30" placeholder="Flavor Text"></textarea>
+            <!-- Rarity & Power/Toughness -->
             <select id="raritySelect" name="rarity">
               <option value="">-Rarity-</option>
               <option value="Common">Common</option>
@@ -137,12 +143,6 @@
               <option value="Rare">Rare</option>
               <option value="Mythic Rare">Mythic Rare</option>
             </select>
-          </div>
-         <!-- Text box -->
-          <!-- <div id="textbox">
-            <textarea name="abilities" rows="4" cols="30">Enter card abilities</textarea> -->
-            <textarea name="flavor" rows="5" cols="20" placeholder=" Text"></textarea>
-            <!-- Rarity & Power/Toughness -->
             <div id="powerTough">
               P:<input id="powerInput" type="number" step=1 name="power" min=0>
               T:<input id="toughInput" type="number" step=1 name="toughness" min=0>
@@ -150,12 +150,14 @@
           </div>
 
           <input id="search-submit" type=button value="Search the Annals of Lore">
-          <section id="loadingSvg">
-            <h2>Gathering the magic...</h2>
-            <img src="vendor/assets/balls.svg">
-          </section>
         </div> <!-- /outerBorder -->
       </form> <!-- /searchForm -->
+      <section id="loadingSvg">
+        <h2>Gathering the magic...</h2>
+        <img src="vendor/assets/balls.svg">
+      </section>
+      <input class="hidden" id="search-again" type=button value="Search Again">
+      </section>
 
     </div>  <!-- /appWrapper -->
     <section id="cards">
@@ -180,9 +182,9 @@
         <div class="mike-background">
           <div class="character-image"></div>
         </div>
-        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/mikemiksch/">GitHub</a> </p>
+        <p class="character-type">Wizard of Mosh</p>
         <div class="character-desc">
-          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/mike-miksch-42337b49">LinkedIn</a></i></p>
+          <p><br/><i>Legend says he doesn't use magic, he is magic</i></p>
         </div>
         <p class="character-stats">99/9</p>
       </div>
@@ -191,9 +193,9 @@
         <div class="thomas-background">
           <div class="character-image"></div>
         </div>
-        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thomasxmartinez/">GitHub</a></p>
+        <p class="character-type">Red Mage</p>
         <div class="character-desc">
-          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/thomasxmartinez">LinkedIn</a></i></p>
+          <p><br/><i>Legend says he has gathered many magics</i></p>
         </div>
         <p class="character-stats">99/9</p>
       </div>
@@ -202,9 +204,9 @@
         <div class="jaren-background">
           <div class="character-image"></div>
         </div>
-        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/jjron">GitHub</a></p>
+        <p class="character-type">Mythical Mage</p>
         <div class="character-desc">
-          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/jaren-escueta-30186565">LinkedIn</a></i></p>
+          <p><br/><i>Legend says magic makes mages</i></p>
         </div>
         <p class="character-stats">99/9</p>
       </div>
@@ -213,9 +215,9 @@
         <div class="david-background">
           <div class="character-image"></div>
         </div>
-        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thegrimheep">GitHub</a></p>
+        <p class="character-type">Magic Mage Man</p>
         <div class="character-desc">
-          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/david-porter-9584129">LinkedIn</a></i></p>
+          <p><br/><i>Legend says much magic yes</i></p>
         </div>
         <p class="character-stats">99/9</p>
       </div>

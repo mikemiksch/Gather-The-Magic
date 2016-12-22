@@ -30,7 +30,7 @@ body {
   /*margin-bottom: 15%;*/
 }
 
-#search-submit {
+#search-submit, #search-again {
   text-align: center;
   border-radius: 12px;
   padding: 10px;
@@ -41,6 +41,11 @@ body {
   border-style: none;
   background-color: maroon;
   margin-top: 10px;
+}
+
+#loadingSvg {
+  /*margin: 0 auto;*/
+  text-align: center;
 }
 
 .body img {
