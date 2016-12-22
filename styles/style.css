@@ -70,11 +70,20 @@ li {
   border-bottom-left-radius: 10px;
   opacity: 0.9;
   z-index: -10;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .imageTop {
+  padding: 0px;
+  width: 100%;
+}
+
+.imageTop img {
+  display: inline-block;
   width: 300px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .list-group-item img {
@@ -107,6 +116,8 @@ li {
 
 footer {
   color: #FAFAFA;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 600px) {

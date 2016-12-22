@@ -1,7 +1,7 @@
 
 #outerBorder {
   border: 13px solid black;
-  height: 31em;
+  padding-bottom: 1em;
   border-radius:10px;
   margin-left: 1%;
   margin-right: 1%;
@@ -87,7 +87,7 @@
 }
 
 #flavor {
-  width: 40%;
+  width: 75%;
   height: 10%;
   box-shadow: .01em .01em .01em;
   border-style: solid;
@@ -124,11 +124,14 @@
   body {
     margin: 10px;
   }
+  #flavor {
+    width: 250px;
+  }
 }
 
 @media only screen and (min-width: 362px){
   #powerTough {
-    display: inline;
+    display: block;
   }
 }
 
