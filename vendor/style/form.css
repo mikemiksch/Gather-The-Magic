@@ -1,13 +1,4 @@
-@font-face
-{
-  font-family: matrixb;
-  src: url(http://www.angelfire.com/va/planeswlk/matrixb.ttf);
-}
-@font-face
-{
-  font-family: mplantin;
-  src: url(http://www.angelfire.com/va/planeswlk/Mplantin.ttf);
-}
+
 #outerBorder {
   border: 13px solid black;
   height: 18em;
