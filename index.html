@@ -4,16 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gather The Magic</title>
+    <!-- Vendor styles -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911">
     <link rel="stylesheet" href="vendor/slick/slick.css">
     <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="vendor/style/menu.css">
+    <link rel="stylesheet" href="vendor/assets/fonts/node_modules/mana-font/css/mana.css">
+    <!-- Our styles -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/searchResultsStyling.css">
-    <link rel="stylesheet" href="vendor/style/menu.css">
     <link rel="stylesheet" href="styles/cardMockUp.css">
-    <link rel="stylesheet" href="vendor/assets/fonts/node_modules/mana-font/css/mana.css">
-    <link rel="stylesheet" href="vendor/style/form.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- Templates -->
     <script id="card-data-template" type="text/x-handlebars-template">
       <section class="card-data">
         <section class="name-cost">
@@ -61,7 +64,7 @@
           <button class="toggle"><span></span>
           <span></span>
           <span></span></button>
-          <a href="" class="navbar-brand">Gather The Magic</a>
+          <a href="" class="navbar-brand">GTM</a>
         </div><!-- navbar-header -->
 
           <ul class="nav navcollaps">
@@ -69,14 +72,14 @@
             <li><a href="#"><i class="ms ms-r ms-cost"></i>  Blah</a></li>
             <li><a href="/videos"><i class="ms ms-u ms-cost"></i>  Videos</a></li>
             <li><a href="/about"><i class="ms ms-w ms-cost"></i>  About</a></li>
-            <li><a href="https://github.com/mikemiksch/Gather-The-Magic"><i class="ms ms-b ms-cost"></i>  GitHub</a></li>
+            <li><a href="https://github.com/mikemiksch/Gather-The-Magic" target="_blank"><i class="ms ms-b ms-cost"></i>  GitHub</a></li>
           </ul>
 
       </div><!-- contaier -->
     </div><!-- navbar -->
 
     <div id="appWrapper">
-      <img src="vendor/assets/images/GatherMagicRemix.png" class="imageTop">
+      <img src="vendor/assets/images/GatherMagicReRemix.png" class="imageTop">
       <ul class="list-unstyled list-group">
         <li class="list-group-item">
           <img src="vendor/assets/images/green.png">
@@ -100,9 +103,10 @@
         <!-- Title line & CMC-->
           <div id="titleBorder">
             <div id="title">
-
               <input type="text" id="titleInput" name="title" placeholder="Card Name">
-              Mana:<input type="number" step=1 id="cmcInput" name="cmc" min=0 max=16>
+              <div id="cmc">
+                Mana:<input type="number" step=1 id="cmcInput" name="cmc" min=0 max=16>
+              </div>
             </div>
           </div>
         <!-- Body image -->
@@ -140,110 +144,109 @@
             </select>
           </div>
          <!-- Text box -->
-          <!-- <div id="textbox">
-            <textarea name="abilities" rows="4" cols="30">Enter card abilities</textarea> -->
-            <textarea name="flavor" rows="5" cols="20" placeholder=" Text"></textarea>
-            <!-- Rarity & Power/Toughness -->
-            <div id="powerTough">
-              P:<input id="powerInput" type="number" step=1 name="power" min=0>
-              T:<input id="toughInput" type="number" step=1 name="toughness" min=0>
-            </div>
+          <textarea name="flavor" rows="5" cols="20" placeholder=" Text"></textarea>
+          <!-- Rarity & Power/Toughness -->
+          <div id="powerTough">
+            P:<input id="powerInput" type="number" step=1 name="power" min=0>
+            T:<input id="toughInput" type="number" step=1 name="toughness" min=0>
           </div>
-
-          <input id="search-submit" type=button value="Search the Annals of Lore">
+          <div id="submitBox">
+            <input id="search-submit" type=button value="Search the Annals of Lore">
+          </div>
           <section id="loadingSvg">
-            <h2>Gathering the magic...</h2>
+            <p>Gathering the magic...</p>
             <img src="vendor/assets/balls.svg">
           </section>
         </div> <!-- /outerBorder -->
       </form> <!-- /searchForm -->
 
+      <section id="cards">
+      </section>
+      <section id="not-found" class="hidden">
+        <img src="assets/notfound.jpg">
+        <P>Try revising your search criteria</p>
+      </section>
+      <section id="videos" class="tab-content ">
+        <div class="slider-for">
+          <div class="intrinsic-container intrinsic-container-4x3">
+            <iframe src="https://www.youtube.com/embed/GadqHggATe8" allowfullscreen></iframe>
+          </div>
+          <div class="intrinsic-container intrinsic-container-4x3">
+            <iframe src="https://www.youtube.com/embed/mCGJ_UUtS1Q" allowfullscreen></iframe>
+          </div>
+          <div class="intrinsic-container intrinsic-container-4x3">
+            <iframe src="https://www.youtube.com/embed/Jik47gv8dn4" allowfullscreen></iframe>
+          </div>
+          <div class="intrinsic-container intrinsic-container-4x3">
+            <iframe src="https://www.youtube.com/embed/qoO0fFAVXzE" allowfullscreen></iframe>
+          </div>
+          <div class="intrinsic-container intrinsic-container-4x3">
+            <iframe src="https://www.youtube.com/embed/fG3eXBccyWg" allowfullscreen></iframe>
+          </div>
+          <div class="intrinsic-container intrinsic-container-4x3">
+            <iframe src="https://www.youtube.com/embed/5FTAbftngf0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="slider-nav">
+          <img src="https://i.ytimg.com/vi/GadqHggATe8/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_umnOdttt3jGCvfmx2KuUKevAcE">
+          <img src="https://i.ytimg.com/vi/mCGJ_UUtS1Q/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Efc6hV3LAVZ0UkNCidVeOSM8T8o">
+          <img src="https://i.ytimg.com/vi/Jik47gv8dn4/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=o4ZDLuettzxezq6c-3VIGBHNaKM">
+          <img src="https://i.ytimg.com/vi/qoO0fFAVXzE/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Y_5nkjtyhhuXCJrk132fI6lX2gE">
+          <img src="https://i.ytimg.com/vi/fG3eXBccyWg/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=iHpZblA3BBAtOU2_SV_1ZN9h-_I">
+          <img src="https://i.ytimg.com/vi/5FTAbftngf0/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=9FQarBiKxTBk74bZEhk7zD53boA">
+        </div>
+      </section>
+      <!-- /*need to refactor below*/ -->
+      <section id="about" class="tab-content">
+        <div class="fixMock">
+        <div class="cardMockUp">
+          <p class="character-name"><i class="ms ms-r ms-cost"></i>  Killer Mike</p>
+          <div class="mike-background">
+            <div class="character-image"></div>
+          </div>
+          <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/mikemiksch/">GitHub</a> </p>
+          <div class="character-desc">
+            <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/mike-miksch-42337b49">LinkedIn</a></i></p>
+          </div>
+          <p class="character-stats">99/9</p>
+        </div>
+        <div class="cardMockUp">
+          <p class="character-name"><i class="ms ms-w ms-cost"></i>   Thomas</p>
+          <div class="thomas-background">
+            <div class="character-image"></div>
+          </div>
+          <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thomasxmartinez/">GitHub</a></p>
+          <div class="character-desc">
+            <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/thomasxmartinez">LinkedIn</a></i></p>
+          </div>
+          <p class="character-stats">99/9</p>
+        </div>
+        <div class="cardMockUp">
+          <p class="character-name"><i class="ms ms-s ms-cost"></i>  Jaren</p>
+          <div class="jaren-background">
+            <div class="character-image"></div>
+          </div>
+          <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/jjron">GitHub</a></p>
+          <div class="character-desc">
+            <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/jaren-escueta-30186565">LinkedIn</a></i></p>
+          </div>
+          <p class="character-stats">99/9</p>
+        </div>
+        <div class="cardMockUp">
+          <p class="character-name"><i class="ms ms-b ms-cost"></i>  David</p>
+          <div class="david-background">
+            <div class="character-image"></div>
+          </div>
+          <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thegrimheep">GitHub</a></p>
+          <div class="character-desc">
+            <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/david-porter-9584129">LinkedIn</a></i></p>
+          </div>
+          <p class="character-stats">99/9</p>
+        </div>
+      </div>
+      </section>
     </div>  <!-- /appWrapper -->
-    <section id="cards">
-    </section>
-    <section id="not-found" class="hidden">
-      <img src="assets/notfound.jpg">
-      <P>Try revising your search criteria</p>
-    </section>
-    <section id="videos" class="tab-content ">
-      <div class="slider-for">
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/GadqHggATe8" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/mCGJ_UUtS1Q" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/Jik47gv8dn4" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/qoO0fFAVXzE" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/fG3eXBccyWg" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/5FTAbftngf0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="slider-nav">
-        <img src="https://i.ytimg.com/vi/GadqHggATe8/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_umnOdttt3jGCvfmx2KuUKevAcE">
-        <img src="https://i.ytimg.com/vi/mCGJ_UUtS1Q/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Efc6hV3LAVZ0UkNCidVeOSM8T8o">
-        <img src="https://i.ytimg.com/vi/Jik47gv8dn4/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=o4ZDLuettzxezq6c-3VIGBHNaKM">
-        <img src="https://i.ytimg.com/vi/qoO0fFAVXzE/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Y_5nkjtyhhuXCJrk132fI6lX2gE">
-        <img src="https://i.ytimg.com/vi/fG3eXBccyWg/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=iHpZblA3BBAtOU2_SV_1ZN9h-_I">
-        <img src="https://i.ytimg.com/vi/5FTAbftngf0/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=9FQarBiKxTBk74bZEhk7zD53boA">
-      </div>
-    </section>
-    <!-- /*need to refactor below*/ -->
-    <section id="about" class="tab-content">
-      <div class="fixMock">
-      <div class="cardMockUp">
-        <p class="character-name"><i class="ms ms-r ms-cost"></i>  Killer Mike</p>
-        <div class="mike-background">
-          <div class="character-image"></div>
-        </div>
-        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/mikemiksch/">GitHub</a> </p>
-        <div class="character-desc">
-          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/mike-miksch-42337b49">LinkedIn</a></i></p>
-        </div>
-        <p class="character-stats">99/9</p>
-      </div>
-      <div class="cardMockUp">
-        <p class="character-name"><i class="ms ms-w ms-cost"></i>   Thomas</p>
-        <div class="thomas-background">
-          <div class="character-image"></div>
-        </div>
-        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thomasxmartinez/">GitHub</a></p>
-        <div class="character-desc">
-          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/thomasxmartinez">LinkedIn</a></i></p>
-        </div>
-        <p class="character-stats">99/9</p>
-      </div>
-      <div class="cardMockUp">
-        <p class="character-name"><i class="ms ms-s ms-cost"></i>  Jaren</p>
-        <div class="jaren-background">
-          <div class="character-image"></div>
-        </div>
-        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/jjron">GitHub</a></p>
-        <div class="character-desc">
-          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/jaren-escueta-30186565">LinkedIn</a></i></p>
-        </div>
-        <p class="character-stats">99/9</p>
-      </div>
-      <div class="cardMockUp">
-        <p class="character-name"><i class="ms ms-b ms-cost"></i>  David</p>
-        <div class="david-background">
-          <div class="character-image"></div>
-        </div>
-        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thegrimheep">GitHub</a></p>
-        <div class="character-desc">
-          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/david-porter-9584129">LinkedIn</a></i></p>
-        </div>
-        <p class="character-stats">99/9</p>
-      </div>
-    </div>
-    </section>
+    <footer>&copy; 2016</footer>
     <!-- //refactor above// -->
     <!--Vendor scripts-->
     <script src="vendor/scripts/jquery-2.1.4.js"></script>
