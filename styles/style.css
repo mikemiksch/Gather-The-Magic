@@ -109,6 +109,16 @@ footer {
   color: #FAFAFA;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
+
+  #submitBox {
+    font-size: 2em;
+  }
+}
+
 @media only screen and (min-width: 890px) {
   .list-group-item img {
     max-width: 5%;
