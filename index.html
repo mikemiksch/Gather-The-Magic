@@ -144,7 +144,7 @@
             </select>
           </div>
          <!-- Text box -->
-          <textarea name="flavor" rows="5" cols="20" placeholder=" Text"></textarea>
+          <textarea id="flavor" rows="5" cols="20" placeholder=" Text"></textarea>
           <!-- Rarity & Power/Toughness -->
           <div id="powerTough">
             P:<input id="powerInput" type="number" step=1 name="power" min=0>
@@ -153,12 +153,12 @@
           <div id="submitBox">
             <input id="search-submit" type=button value="Search the Annals of Lore">
           </div>
-          <section id="loadingSvg">
-            <p>Gathering the magic...</p>
-            <img src="vendor/assets/balls.svg">
-          </section>
         </div> <!-- /outerBorder -->
       </form> <!-- /searchForm -->
+      <section id="loadingSvg">
+        <p>Gathering the magic...</p>
+        <img src="vendor/assets/balls.svg">
+      </section>
       <section id="hidden-search">
         <input class="hidden" id="search-again" type=button value="Search Again">
       </section>
