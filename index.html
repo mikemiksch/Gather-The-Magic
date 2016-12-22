@@ -1,79 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gather The Magic</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/slick/slick.css">
-    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/searchResultsStyling.css">
-    <link rel="stylesheet" href="vendor/style/menu.css">
-    <link rel="stylesheet" href="styles/cardMockUp.css">
-    <link rel="stylesheet" href="vendor/assets/fonts/node_modules/mana-font/css/mana.css">
-    <link rel="stylesheet" href="vendor/style/form.css">
-    <script id="card-data-template" type="text/x-handlebars-template">
-      <section class="card-data">
-        <section class="name-cost">
-          <div class="card-name">
-            <P>{{name}}</P>
-          </div>
-          <div class="mana-cost">
-            <P>Total Mana Cost: {{cmc}}</P>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gather The Magic</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/slick/slick.css">
+  <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/searchResultsStyling.css">
+  <link rel="stylesheet" href="vendor/style/menu.css">
+  <link rel="stylesheet" href="styles/cardMockUp.css">
+  <link rel="stylesheet" href="vendor/assets/fonts/node_modules/mana-font/css/mana.css">
+  <link rel="stylesheet" href="vendor/style/form.css">
+  <script id="card-data-template" type="text/x-handlebars-template">
+    <section class="card-data">
+      <section class="name-cost">
+        <div class="card-name">
+          <P>{{name}}</P>
+        </div>
+        <div class="mana-cost">
+          <P>Total Mana Cost: {{cmc}}</P>
+        </div>
+      </section>
+      <section class="expanded-info hidden">
+        <section class="card-image">
+          <img src="{{imageUrl}}">
         </section>
-        <section class="expanded-info hidden">
-          <section class="card-image">
-            <img src="{{imageUrl}}">
+        <section class="data-block">
+          <section class="color-type">
+            <div class="card-color">
+              <P>{{colors}}</P>
+            </div>
+            <div class="card-type">
+              <P>{{types}}</P>
+            </div>
           </section>
-          <section class="data-block">
-            <section class="color-type">
-              <div class="card-color">
-                <P>{{colors}}</P>
-              </div>
-              <div class="card-type">
-                <P>{{types}}</P>
-              </div>
-            </section>
-            <section class="card-text">
-              <P>{{text}}</P>
-            </section>
-            <section class="rarity-stats">
-              <div class="card-rarity">
-                <P>{{rarity}}</P>
-              </div>
-              <div class="power-toughness">
-                <P>{{power}}/{{toughness}}</P>
-              </div>
-            </section>
+          <section class="card-text">
+            <P>{{text}}</P>
+          </section>
+          <section class="rarity-stats">
+            <div class="card-rarity">
+              <P>{{rarity}}</P>
+            </div>
+            <div class="power-toughness">
+              <P>{{power}}/{{toughness}}</P>
+            </div>
           </section>
         </section>
       </section>
-    </script>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="contaier">
+    </section>
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="contaier">
 
-        <div class="navbar-header">
-          <button class="toggle"><span></span>
+      <div class="navbar-header">
+        <button class="toggle"><span></span>
           <span></span>
           <span></span></button>
           <a href="" class="navbar-brand">Gather The Magic</a>
-        </div><!-- navbar-header -->
-
-          <ul class="nav navcollaps">
-            <li><a href="/"><i class="ms ms-g ms-cost"></i>  Home</a></li>
-            <li><a href="/videos"><i class="ms ms-r ms-cost"></i>  Videos</a></li>
-            <li><a href="/about"><i class="ms ms-u ms-cost"></i>  About</a></li>
-            <li><a href="/credits"><i class="ms ms-w ms-cost"></i>  Credits</a></li>
-            <li><a href="https://github.com/mikemiksch/Gather-The-Magic"><i class="ms ms-b ms-cost"></i>  GitHub</a></li>
-          </ul>
-
-      </div><!-- contaier -->
-    </div><!-- navbar -->
+        </div>
+        <ul class="nav navcollaps">
+          <li><a href="/"><i class="ms ms-g ms-cost"></i>  Home</a></li>
+          <li><a href="/videos"><i class="ms ms-r ms-cost"></i>  Videos</a></li>
+          <li><a href="/about"><i class="ms ms-u ms-cost"></i>  About</a></li>
+          <li><a href="/credits"><i class="ms ms-w ms-cost"></i>  Credits</a></li>
+          <li><a href="https://github.com/mikemiksch/Gather-The-Magic"><i class="ms ms-b ms-cost"></i>  GitHub</a></li>
+        </ul>
+      </div>
+    </div>
 
     <div id="appWrapper">
       <img src="vendor/assets/images/GatherMagicRemix.png" class="imageTop">
@@ -97,7 +95,7 @@
 
       <form id="searchForm" class="tab-content">
         <div id="outerBorder">
-        <!-- Title line & CMC-->
+          <!-- Title line & CMC-->
           <div id="titleBorder">
             <div id="title">
 
@@ -105,12 +103,12 @@
               Mana:<input type="number" step=1 id="cmcInput" name="cmc" min=0 max=16>
             </div>
           </div>
-        <!-- Body image -->
+          <!-- Body image -->
           <div class="body">
 
             <img src="assets/suchMagic.png">
           </div>
-        <!-- Type line & Color -->
+          <!-- Type line & Color -->
           <div id="typeLine">
             <select id="typeSelect" name="type">
               <option value="">-Type-</option>
@@ -139,143 +137,143 @@
               <option value="Mythic Rare">Mythic Rare</option>
             </select>
           </div>
-         <!-- Text box -->
+          <!-- Text box -->
           <!-- <div id="textbox">
-            <textarea name="abilities" rows="4" cols="30">Enter card abilities</textarea> -->
-            <textarea id="flavor" rows="3" cols="10" placeholder="Flavor Text"></textarea>
-            <!-- Rarity & Power/Toughness -->
-            <div id="powerTough">
-              P:<input id="powerInput" type="number" step=1 name="power" min=0>
-              T:<input id="toughInput" type="number" step=1 name="toughness" min=0>
-            </div>
+          <textarea name="abilities" rows="4" cols="30">Enter card abilities</textarea> -->
+          <textarea id="flavor" rows="3" cols="10" placeholder="Flavor Text"></textarea>
+          <!-- Rarity & Power/Toughness -->
+          <div id="powerTough">
+            P:<input id="powerInput" type="number" step=1 name="power" min=0>
+            T:<input id="toughInput" type="number" step=1 name="toughness" min=0>
           </div>
+        </div>
 
-          <input id="search-submit" type=button value="Search the Annals of Lore">
-        </div> <!-- /outerBorder -->
-      </form> <!-- /searchForm -->
-      <section id="loadingSvg">
-        <h2>Gathering the magic...</h2>
-        <img src="vendor/assets/balls.svg">
-      </section>
-      <section id="hidden-search">
+        <input id="search-submit" type=button value="Search the Annals of Lore">
+      </div> <!-- /outerBorder -->
+    </form> <!-- /searchForm -->
+    <section id="loadingSvg">
+      <h2>Gathering the magic...</h2>
+      <img src="vendor/assets/balls.svg">
+    </section>
+    <section id="hidden-search">
       <input class="hidden" id="search-again" type=button value="Search Again">
-      </section>
     </section>
+  </section>
 
-    </div>  <!-- /appWrapper -->
-    <section id="cards">
-    </section>
-    <section id="not-found" class="hidden">
-      <img src="assets/notfound.jpg">
-      <P>Try revising your search criteria</p>
-    </section>
-    <section id="videos" class="tab-content ">
-      <div class="slider-for">
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/GadqHggATe8" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/mCGJ_UUtS1Q" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/Jik47gv8dn4" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/qoO0fFAVXzE" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/fG3eXBccyWg" allowfullscreen></iframe>
-        </div>
-        <div class="intrinsic-container intrinsic-container-4x3">
-          <iframe src="https://www.youtube.com/embed/5FTAbftngf0" allowfullscreen></iframe>
-        </div>
+</div>  <!-- /appWrapper -->
+<section id="cards">
+</section>
+<section id="not-found" class="hidden">
+  <img src="assets/notfound.jpg">
+  <P>Try revising your search criteria</p>
+  </section>
+  <section id="videos" class="tab-content ">
+    <div class="slider-for">
+      <div class="intrinsic-container intrinsic-container-4x3">
+        <iframe src="https://www.youtube.com/embed/GadqHggATe8" allowfullscreen></iframe>
       </div>
-      <div class="slider-nav">
-        <img src="https://i.ytimg.com/vi/GadqHggATe8/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_umnOdttt3jGCvfmx2KuUKevAcE">
-        <img src="https://i.ytimg.com/vi/mCGJ_UUtS1Q/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Efc6hV3LAVZ0UkNCidVeOSM8T8o">
-        <img src="https://i.ytimg.com/vi/Jik47gv8dn4/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=o4ZDLuettzxezq6c-3VIGBHNaKM">
-        <img src="https://i.ytimg.com/vi/qoO0fFAVXzE/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Y_5nkjtyhhuXCJrk132fI6lX2gE">
-        <img src="https://i.ytimg.com/vi/fG3eXBccyWg/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=iHpZblA3BBAtOU2_SV_1ZN9h-_I">
-        <img src="https://i.ytimg.com/vi/5FTAbftngf0/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=9FQarBiKxTBk74bZEhk7zD53boA">
+      <div class="intrinsic-container intrinsic-container-4x3">
+        <iframe src="https://www.youtube.com/embed/mCGJ_UUtS1Q" allowfullscreen></iframe>
       </div>
-    </section>
-    <!-- /*need to refactor below*/ -->
-   <section id="about" class="tab-content">
-     <div class="fixMock">
-     <div class="cardMockUp">
-       <p class="character-name"><i class="ms ms-r ms-cost"></i>  Killer Mike</p>
-       <div class="mike-background">
-         <div class="character-image"></div>
-       </div>
-       <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/mikemiksch/">GitHub</a> </p>
-       <div class="character-desc">
-         <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/mike-miksch-42337b49">LinkedIn</a></i></p>
-       </div>
-       <p class="character-stats">99/9</p>
-     </div>
-     <div class="cardMockUp">
-       <p class="character-name"><i class="ms ms-w ms-cost"></i>   Thomas</p>
-       <div class="thomas-background">
-         <div class="character-image"></div>
-       </div>
-       <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thomasxmartinez/">GitHub</a></p>
-       <div class="character-desc">
-         <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/thomasxmartinez">LinkedIn</a></i></p>
-       </div>
-       <p class="character-stats">99/9</p>
-     </div>
-     <div class="cardMockUp">
-       <p class="character-name"><i class="ms ms-s ms-cost"></i>  Jaren</p>
-       <div class="jaren-background">
-         <div class="character-image"></div>
-       </div>
-       <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/jjron">GitHub</a></p>
-       <div class="character-desc">
-         <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/jaren-escueta-30186565">LinkedIn</a></i></p>
-       </div>
-       <p class="character-stats">99/9</p>
-     </div>
-     <div class="cardMockUp">
-       <p class="character-name"><i class="ms ms-b ms-cost"></i>  David</p>
-       <div class="david-background">
-         <div class="character-image"></div>
-       </div>
-       <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thegrimheep">GitHub</a></p>
-       <div class="character-desc">
-         <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/david-porter-9584129">LinkedIn</a></i></p>
-       </div>
-       <p class="character-stats">99/9</p>
-     </div>
-   </div>
-   </section>
-    <section id="credits" class="tab-content">
-      <h1>Special Thanks To:</h1>
-      <ul>
-        <p><a class="creditLinks" href="http://magicthegathering.io/">Magic: The Gathering API. </a>Which is a part of... <a class="creditLinks" href="http://company.wizards.com/content/games">Wizards of the Coast</a></p>
-        <p><a class="creditLinks" href="https://github.com/andrewgioia/Mana">Andrew Gioia</a>  Who gave us the Magic Icons. <a class="creditLinks" href="http://andrewgioia.github.io/Mana/index.html">Magic: the Gathering card symbol font.</a></p>
+      <div class="intrinsic-container intrinsic-container-4x3">
+        <iframe src="https://www.youtube.com/embed/Jik47gv8dn4" allowfullscreen></iframe>
+      </div>
+      <div class="intrinsic-container intrinsic-container-4x3">
+        <iframe src="https://www.youtube.com/embed/qoO0fFAVXzE" allowfullscreen></iframe>
+      </div>
+      <div class="intrinsic-container intrinsic-container-4x3">
+        <iframe src="https://www.youtube.com/embed/fG3eXBccyWg" allowfullscreen></iframe>
+      </div>
+      <div class="intrinsic-container intrinsic-container-4x3">
+        <iframe src="https://www.youtube.com/embed/5FTAbftngf0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="slider-nav">
+      <img src="https://i.ytimg.com/vi/GadqHggATe8/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_umnOdttt3jGCvfmx2KuUKevAcE">
+      <img src="https://i.ytimg.com/vi/mCGJ_UUtS1Q/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Efc6hV3LAVZ0UkNCidVeOSM8T8o">
+      <img src="https://i.ytimg.com/vi/Jik47gv8dn4/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=o4ZDLuettzxezq6c-3VIGBHNaKM">
+      <img src="https://i.ytimg.com/vi/qoO0fFAVXzE/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Y_5nkjtyhhuXCJrk132fI6lX2gE">
+      <img src="https://i.ytimg.com/vi/fG3eXBccyWg/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=iHpZblA3BBAtOU2_SV_1ZN9h-_I">
+      <img src="https://i.ytimg.com/vi/5FTAbftngf0/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=9FQarBiKxTBk74bZEhk7zD53boA">
+    </div>
+  </section>
+  <!-- /*need to refactor below*/ -->
+  <section id="about" class="tab-content">
+    <div class="fixMock">
+      <div class="cardMockUp">
+        <p class="character-name"><i class="ms ms-r ms-cost"></i>  Killer Mike</p>
+        <div class="mike-background">
+          <div class="character-image"></div>
+        </div>
+        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/mikemiksch/">GitHub</a> </p>
+        <div class="character-desc">
+          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/mike-miksch-42337b49">LinkedIn</a></i></p>
+        </div>
+        <p class="character-stats">99/9</p>
+      </div>
+      <div class="cardMockUp">
+        <p class="character-name"><i class="ms ms-w ms-cost"></i>   Thomas</p>
+        <div class="thomas-background">
+          <div class="character-image"></div>
+        </div>
+        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thomasxmartinez/">GitHub</a></p>
+        <div class="character-desc">
+          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/thomasxmartinez">LinkedIn</a></i></p>
+        </div>
+        <p class="character-stats">99/9</p>
+      </div>
+      <div class="cardMockUp">
+        <p class="character-name"><i class="ms ms-s ms-cost"></i>  Jaren</p>
+        <div class="jaren-background">
+          <div class="character-image"></div>
+        </div>
+        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/jjron">GitHub</a></p>
+        <div class="character-desc">
+          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/jaren-escueta-30186565">LinkedIn</a></i></p>
+        </div>
+        <p class="character-stats">99/9</p>
+      </div>
+      <div class="cardMockUp">
+        <p class="character-name"><i class="ms ms-b ms-cost"></i>  David</p>
+        <div class="david-background">
+          <div class="character-image"></div>
+        </div>
+        <p class="character-type"><i class="fa fa-github-alt" aria-hidden="true"></i><a href="https://github.com/thegrimheep">GitHub</a></p>
+        <div class="character-desc">
+          <p><br/><i><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/david-porter-9584129">LinkedIn</a></i></p>
+        </div>
+        <p class="character-stats">99/9</p>
+      </div>
+    </div>
+  </section>
+  <section id="credits" class="tab-content">
+    <h1>Special Thanks To:</h1>
+    <ul>
+      <p><a class="creditLinks" href="http://magicthegathering.io/">Magic: The Gathering API. </a>Which is a part of... <a class="creditLinks" href="http://company.wizards.com/content/games">Wizards of the Coast</a></p>
+      <p><a class="creditLinks" href="https://github.com/andrewgioia/Mana">Andrew Gioia</a>  Who gave us the Magic Icons. <a class="creditLinks" href="http://andrewgioia.github.io/Mana/index.html">Magic: the Gathering card symbol font.</a></p>
 
-      </ul>
-    </section>
-    <!-- //refactor above// -->
-    <!--Vendor scripts-->
-    <script src="vendor/scripts/jquery-2.1.4.js"></script>
-    <script src="vendor/scripts/menuScripts.js"></script>
-    <script src="vendor/scripts/handlebars.js"></script>
-    <script src="vendor/scripts/highlight.pack.js"></script>
-    <script src="vendor/scripts/html5sql.js"></script>
-    <script src="vendor/scripts/marked.js"></script>
-    <script src="vendor/scripts/page.js"></script>
-    <script src="vendor/scripts/webdb.js"></script>
-    <script src="vendor/slick/slick.min.js"></script><!-- for carousel -->
-    <!--Our scripts-->
-    <script src="scripts/cards.js"></script>
-    <script src="scripts/showCards.js"></script>
-    <script src="scripts/hide-reveal.js"></script>
-    <script src="scripts/formRevealer.js"></script>
-    <script src="scripts/videosController.js"></script>
-    <script src="scripts/aboutController.js"></script>
-    <script src="scripts/credits.js"></script>
-    <script src="scripts/routes.js"></script>
-    <script src="scripts/carousel.js"></script>
-  </body>
-  </html>
+    </ul>
+  </section>
+  <!-- //refactor above// -->
+  <!--Vendor scripts-->
+  <script src="vendor/scripts/jquery-2.1.4.js"></script>
+  <script src="vendor/scripts/menuScripts.js"></script>
+  <script src="vendor/scripts/handlebars.js"></script>
+  <script src="vendor/scripts/highlight.pack.js"></script>
+  <script src="vendor/scripts/html5sql.js"></script>
+  <script src="vendor/scripts/marked.js"></script>
+  <script src="vendor/scripts/page.js"></script>
+  <script src="vendor/scripts/webdb.js"></script>
+  <script src="vendor/slick/slick.min.js"></script><!-- for carousel -->
+  <!--Our scripts-->
+  <script src="scripts/cards.js"></script>
+  <script src="scripts/showCards.js"></script>
+  <script src="scripts/hide-reveal.js"></script>
+  <script src="scripts/formRevealer.js"></script>
+  <script src="scripts/videosController.js"></script>
+  <script src="scripts/aboutController.js"></script>
+  <script src="scripts/credits.js"></script>
+  <script src="scripts/routes.js"></script>
+  <script src="scripts/carousel.js"></script>
+</body>
+</html>
