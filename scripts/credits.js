@@ -6,6 +6,7 @@
     $('#search-again').hide();
     $('.card-data').remove();
     $('#credits').fadeIn();
+    $('#not-found').hide();
   };
   module.creditsController = creditsController;
 }(window));
