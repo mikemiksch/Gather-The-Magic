@@ -1,11 +1,12 @@
 
 #outerBorder {
   border: 13px solid black;
-  height: 31em;
+  padding-bottom: 1em;
   border-radius:10px;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 12px;
+  max-width: 320px;
 }
 
 #titleBorder {
@@ -87,7 +88,7 @@
 }
 
 #flavor {
-  width: 40%;
+  width: 75%;
   height: 10%;
   box-shadow: .01em .01em .01em;
   border-style: solid;
@@ -124,19 +125,22 @@
   body {
     margin: 10px;
   }
-}
-
-@media only screen and (min-width: 362px){
-  #powerTough {
-    display: inline;
+  #flavor {
+    width: 250px;
   }
 }
+/*
+@media only screen and (min-width: 362px){
+  #powerTough {
+    display: block;
+  }
+}*/
 
 @media only screen and (min-width: 425px){
   #outerBorder {
     font-size: 16px;
-    margin-left: 5%;
-    margin-right: 5%;
+    /*margin-left: ;
+    margin-right: 5%;*/
   }
 }
 
@@ -148,23 +152,23 @@
 @media only screen and (min-width: 600px){
   #outerBorder {
     font-size: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
+    /*margin-left: 10%;
+    margin-right: 10%;*/
   }
 }
 
 @media only screen and (min-width: 890px){
   #outerBorder {
     font-size: 22px;
-    margin-left: 20%;
-    margin-right: 20%;
+    /*margin-left: 20%;
+    margin-right: 20%;*/
   }
 }
 
 @media only screen and (min-width: 1100px){
   #outerBorder {
     font-size: 22px;
-    margin-left: 30%;
-    margin-right: 30%;
+    /*margin-left: 30%;
+    margin-right: 30%;*/
   }
 }
