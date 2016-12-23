@@ -3,6 +3,8 @@
 
 Gather The Magic
 
+Team: Mike Miksch, Thomas Martinez, David Porter, Jaren Escueta
+
   What is it?
   -----------
 
