@@ -5,6 +5,7 @@
     $('.card-data').remove();
     $('#search-again').hide();
     $('#about').fadeIn();
-  }
+    $('#not-found').hide();
+  };
   module.aboutController = aboutController;
 }(window));

@@ -7,7 +7,7 @@
     $('.tab-content').hide();
     $('.card-data').remove();
     $('#searchForm').fadeIn();
-    $('#submit-search').show();
+    $('#search-submit').show();
   };
   module.formRevealer = formRevealer;
 }(window));
